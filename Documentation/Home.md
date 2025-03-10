@@ -13,3 +13,4 @@ Ce projet vise à étudier l'évolution des doctrines et méthodes en entreprena
 
 * [Problématique et questionnement](Problematique-Questionnement.md) 
 * [Listes des CEOs](Listes_ceos.md)
+* [Catalogue des informations](Catalogue-des-informations.md)
