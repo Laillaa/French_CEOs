@@ -14,7 +14,7 @@ En adoptant une démarche exploratoire, il s'agit de proposer un modèle du cham
 
 ## Aspects de l'information à collecter
 
-* Origines géographiques et familiales des astronomes
+* Origines familiales des ceos
 * Formation
 * Enseignement(s)
 * Autres occupations successives
