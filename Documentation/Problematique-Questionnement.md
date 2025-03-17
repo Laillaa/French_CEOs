@@ -7,7 +7,7 @@ En adoptant une démarche exploratoire, il s'agit de proposer un modèle du cham
 *CEO : Chief Executive Officer*
 
 1. Y a-t-il une corrélation entre les origines sociales (riches, modestes, etc.) et les parcours de formation des PDG ? Observe-t-on des spécificités selon la génération ?
-2. La pluri-nationalié d'un individu sur la trajectoire proffessionalle des PDG? (Est-ce que plus de portes s'ouvrent,...)
+2. La pluri-nationalié d'un individu facilite le chemin vers le poste de PDG? (Est-ce que plus de portes s'ouvrent,...)
 3. Existe-t-il une relation entre les disciplines de formation des PDG (économie, ingénierie, droit, etc.) et leurs trajectoires professionnelles ? Certaines formations ouvrent-elles plus de portes à la direction d’entreprise ?
 4. Quels métiers ou expériences successives (consulting, finance, entrepreneuriat, etc.) sont les plus représentés avant d’accéder au poste de PDG ? Y a-t-il une homogénéité selon le contexte socio-démographique ?
 5. Quelle est l’évolution de l’appartenance des PDG à des institutions (clubs économiques, think tanks, cercles d’influence, académies, etc.) ? Observe-t-on des différences selon les générations ou les origines ?  
