@@ -190,9 +190,9 @@ SELECT ?p  (count(*) as ?eff)
 WHERE {
     {?item wdt:P106 wd:Q484876}  # Occupation: CEO
     UNION
-    {?item wdt:P27 wd:Q142}  # country of citizenship: France
+    {?item wdt:P101 wd:Q8187769}     # economic activity 
     UNION
-    {?item wdt:P101 wd:Q8187769}     # economic activity   
+    {?item wdt:P27 wd:Q142}  # country of citizenship: France   
     ?item wdt:P31 wd:Q5; # Any instance of a human.
             wdt:P569 ?birthDate.
     ?item  ?p ?o.
