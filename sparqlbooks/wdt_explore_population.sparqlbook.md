@@ -115,6 +115,7 @@ WHERE {
 
 ### Inspect CEOs and related occupations
 
+Gives us the list
 ```sparql
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -128,8 +129,24 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
             wdt:P27 wd:Q142 # country of citizenship: France
 
     }  
-    LIMIT 200
 ```
+
+Gives us the n. of ceos.
+```sparql
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+   ## Count and inspect occupations and fields of work
+   SELECT (count(*) as ?number)
+    WHERE {
+        ?item wdt:P31 wd:Q5;  # Any instance of a human.
+
+            wdt:P106 wd:Q484876; # Occupation: CEO
+            wdt:P27 wd:Q142 # country of citizenship: France
+
+    }  
+```
+list: 299 Ceos
 
 ```sparql
 ### Modern ceos : born from 1800 onward
@@ -148,23 +165,6 @@ WHERE {
 }
 ```
 2903 CEOs born from 1800 onward
-
-```sparql
-### Modern ceos
-SELECT (count(*) as ?number)
-WHERE {
-    {?item wdt:P106 wd:Q484876}  # # Occupation: CEO
-    UNION
-    {?item wdt:P101 wd:Q8187769}     # economic activity
-    ?item wdt:P31 wd:Q5; # Any instance of a human.
-            wdt:P569 ?birthDate.
-    
-
-    BIND(REPLACE(str(?birthDate), "(.*)([0-9]{4})(.*)", "$2") AS ?year)
-    FILTER(xsd:integer(?year) > 1800  && xsd:integer(?year) < 1951 )
-}
-```
-791 CEOs born between 1800 and  1951
 
 ### Count how many properties are available for the considered population
 
