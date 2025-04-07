@@ -135,7 +135,7 @@ list: 157 CEOs
 
 ### Count how many properties are available for the considered population
 
-Execute this query on the Wikidata sparql-endpoint and save the result to a CSV document that you will store in your project: [population properties list](../Wikidata/properties_20250309.csv)
+Execute this query on the Wikidata sparql-endpoint and save the result to a CSV document that you will store in your project: [population properties list](../Data/Query.csv)
 
 
 Open your CSV file with a spreadsheet editor:
