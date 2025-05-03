@@ -61,6 +61,22 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
     }  
 ```
 
+The New Zealand CEOs
+```sparql
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+   ## Count and inspect occupations and fields of work
+   SELECT ?item ##(COUNT(*) as ?eff)
+    WHERE {
+        ?item wdt:P31 wd:Q5;  # Any instance of a human.
+
+            wdt:P106 wd:Q484876; # Occupation: CEO
+            wdt:P27 wd:Q664 # country of citizenship: New Zealand
+
+    } 
+```
+
 #### Gives us the n. of ceos.
 
 The French CEOs
@@ -98,6 +114,24 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 ```
 list: 102 CEOs
 
+The New Zealand CEOs
+```sparql
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+   ## Count and inspect occupations and fields of work
+   #SELECT ?item ##(COUNT(*) as ?eff)
+   SELECT (count(*) as ?number)
+    WHERE {
+        ?item wdt:P31 wd:Q5;  # Any instance of a human.
+
+            wdt:P106 wd:Q484876; # Occupation: CEO
+            wdt:P27 wd:Q664 # country of citizenship: New Zealand
+
+    }  
+```
+list: 122 CEOs
+
 ### Count how many properties are available for the considered population
 
 Execute this query on the Wikidata sparql-endpoint and save the result to a CSV document that you will store in your project: [population properties list](../Data/Query.csv)
@@ -126,6 +160,7 @@ WHERE {
     UNION
     {?item wdt:P27 wd:Q34} # country of citizenship: Sweden
     UNION
+    {?item wdt:P27 wd:Q664} # country of citizenship: New Zealand
 
 
     ?item wdt:P31 wd:Q5; # Any instance of a human.
