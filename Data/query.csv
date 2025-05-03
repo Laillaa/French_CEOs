@@ -1,0 +1,352 @@
+p,propLabel,eff
+http://www.wikidata.org/prop/direct/P106,occupation,985
+http://www.wikidata.org/prop/direct/P108,employé(e) par,640
+http://www.wikidata.org/prop/direct/P69,scolarité,546
+http://www.wikidata.org/prop/direct/P735,prénom,537
+http://www.wikidata.org/prop/direct/P1412,"langues parlées, écrites ou signées",438
+http://www.wikidata.org/prop/direct/P27,pays de nationalité,417
+http://www.wikidata.org/prop/direct/P21,sexe ou genre,406
+http://www.wikidata.org/prop/direct/P31,nature de l’élément,406
+http://www.wikidata.org/prop/direct/P569,date de naissance,406
+http://www.wikidata.org/prop/direct/P734,nom de famille,347
+http://www.wikidata.org/prop/direct/P19,lieu de naissance,301
+http://www.wikidata.org/prop/direct/P2671,identifiant du Google Knowledge Graph,236
+http://www.wikidata.org/prop/direct/P463,membre de,216
+http://www.wikidata.org/prop/direct/P6634,identifiant LinkedIn d'un profil,191
+http://www.wikidata.org/prop/direct/P1343,décrit par,182
+http://www.wikidata.org/prop/direct/P39,fonction,168
+http://www.wikidata.org/prop/direct/P4939,identifiant VERIF,167
+http://www.wikidata.org/prop/direct/P5337,identifiant Google Actualités d'un sujet,162
+http://www.wikidata.org/prop/direct/P4942,identifiant Societe.com d'un dirigeant,148
+http://www.wikidata.org/prop/direct/P166,distinction reçue,135
+http://www.wikidata.org/prop/direct/P103,langue maternelle,118
+http://www.wikidata.org/prop/direct/P4124,identifiant Who's Who in France,97
+http://www.wikidata.org/prop/direct/P2002,identifiant X d'un compte,96
+http://www.wikidata.org/prop/direct/P18,image,94
+http://www.wikidata.org/prop/direct/P101,domaine d'activité,94
+http://www.wikidata.org/prop/direct/P214,identifiant VIAF,81
+http://www.wikidata.org/prop/direct/P373,catégorie Commons,72
+http://www.wikidata.org/prop/direct/P1268,représente,72
+http://www.wikidata.org/prop/direct/P570,date de mort,71
+http://www.wikidata.org/prop/direct/P7845,Identifiant MarketScreener,71
+http://www.wikidata.org/prop/direct/P13253,identifiant Pappers d'un dirigeant,63
+http://www.wikidata.org/prop/direct/P1344,participant à,56
+http://www.wikidata.org/prop/direct/P6621,identifiant Le Figaro d'un sujet,56
+http://www.wikidata.org/prop/direct/P5008,projet Wikimédia s’intéressant à l'élément,55
+http://www.wikidata.org/prop/direct/P213,identifiant ISNI,53
+http://www.wikidata.org/prop/direct/P973,décrit à l'URL,50
+http://www.wikidata.org/prop/direct/P4434,identifiant La Documentation permanente,50
+http://www.wikidata.org/prop/direct/P269,identifiant IdRef,45
+http://www.wikidata.org/prop/direct/P646,identifiant Freebase,41
+http://www.wikidata.org/prop/direct/P20,lieu de mort,39
+http://www.wikidata.org/prop/direct/P268,identifiant Bibliothèque nationale de France,39
+http://www.wikidata.org/prop/direct/P3052,identifiant Bloomberg d'une personne,36
+http://www.wikidata.org/prop/direct/P2087,identifiant Crunchbase d'une personne,34
+http://www.wikidata.org/prop/direct/P1327,partenaire professionnel ou sportif,32
+http://www.wikidata.org/prop/direct/P1559,nom dans la langue maternelle de la personne,32
+http://www.wikidata.org/prop/direct/P553,a un compte sur,31
+http://www.wikidata.org/prop/direct/P1477,nom de naissance,29
+http://www.wikidata.org/prop/direct/P2003,identifiant Instagram d'un profil,29
+http://www.wikidata.org/prop/direct/P8687,nombre d'abonnés d'un média social,29
+http://www.wikidata.org/prop/direct/P1889,à ne pas confondre avec,28
+http://www.wikidata.org/prop/direct/P2013,identifiant Facebook,27
+http://www.wikidata.org/prop/direct/P22,père,23
+http://www.wikidata.org/prop/direct/P40,enfant,22
+http://www.wikidata.org/prop/direct/P856,site officiel,22
+http://www.wikidata.org/prop/direct/P244,identifiant Bibliothèque du Congrès,21
+http://www.wikidata.org/prop/direct/P10832,identifiant WorldCat Entities,21
+http://www.wikidata.org/prop/direct/P345,identifiant Internet Movie Database (IMDb),20
+http://www.wikidata.org/prop/direct/P6424,description de l'affiliation,20
+http://www.wikidata.org/prop/direct/P6620,identifiant L'Express,19
+http://www.wikidata.org/prop/direct/P641,sport,18
+http://www.wikidata.org/prop/direct/P5297,identifiant Companies House d'un officier,18
+http://www.wikidata.org/prop/direct/P227,identifiant GND (DNB),17
+http://www.wikidata.org/prop/direct/P1416,affilié à,17
+http://www.wikidata.org/prop/direct/P2963,identifiant Goodreads d'un auteur,17
+http://www.wikidata.org/prop/direct/P6104,maintenu par le wikiprojet,17
+http://www.wikidata.org/prop/direct/P4862,identifiant Amazon d'un auteur,16
+http://www.wikidata.org/prop/direct/P119,lieu de sépulture,14
+http://www.wikidata.org/prop/direct/P800,œuvre notable,14
+http://www.wikidata.org/prop/direct/P3222,identifiant Nationalencyklopedin,14
+http://www.wikidata.org/prop/direct/P6886,langues d'écriture,14
+http://www.wikidata.org/prop/direct/P26,conjoint ou conjointe,13
+http://www.wikidata.org/prop/direct/P102,parti politique,13
+http://www.wikidata.org/prop/direct/P937,lieu de travail,13
+http://www.wikidata.org/prop/direct/P1038,membre de la famille,13
+http://www.wikidata.org/prop/direct/P3368,identifiant Prabook,13
+http://www.wikidata.org/prop/direct/P6872,rédacteur ou rédactrice à,13
+http://www.wikidata.org/prop/direct/P8179,identifiant d’autorité de noms Canadiana,13
+http://www.wikidata.org/prop/direct/P551,résidence,12
+http://www.wikidata.org/prop/direct/P906,identifiant SELIBR,12
+http://www.wikidata.org/prop/direct/P1284,identifiant Munzinger,12
+http://www.wikidata.org/prop/direct/P1971,nombre d'enfants,12
+http://www.wikidata.org/prop/direct/P2581,identifiant BabelNet,12
+http://www.wikidata.org/prop/direct/P3065,identifiant RERO,12
+http://www.wikidata.org/prop/direct/P4012,identifiant Semantic Scholar d'un auteur,12
+http://www.wikidata.org/prop/direct/P5587,identifiant Libris,12
+http://www.wikidata.org/prop/direct/P9058,identifiant personnes décédées (matchID),12
+http://www.wikidata.org/prop/direct/P512,diplôme universitaire,11
+http://www.wikidata.org/prop/direct/P3373,frère ou sœur,11
+http://www.wikidata.org/prop/direct/P3630,identifiant Babelio d'un auteur,11
+http://www.wikidata.org/prop/direct/P4369,identifiant Cairn d'un auteur,11
+http://www.wikidata.org/prop/direct/P9885,identifiant Bing,11
+http://www.wikidata.org/prop/direct/P1006,identifiant Bibliothèque royale des Pays-Bas,10
+http://www.wikidata.org/prop/direct/P2600,identifiant Geni.com,10
+http://www.wikidata.org/prop/direct/P6640,identifiant JRC Names,10
+http://www.wikidata.org/prop/direct/P648,identifiant Open Library,9
+http://www.wikidata.org/prop/direct/P3388,identifiant LittleSis d'une personne,9
+http://www.wikidata.org/prop/direct/P3602,candidate ou candidat à l'élection,9
+http://www.wikidata.org/prop/direct/P3899,identifiant Medium,8
+http://www.wikidata.org/prop/direct/P4491,identifiant Isidore,8
+http://www.wikidata.org/prop/direct/P7502,identifiant Golden,8
+http://www.wikidata.org/prop/direct/P10574,identifiant Les Échos,8
+http://www.wikidata.org/prop/direct/P10632,identifiant OpenSanctions,8
+http://www.wikidata.org/prop/direct/P10780,identifiant Radio France d'une personne,8
+http://www.wikidata.org/prop/direct/P25,mère,7
+http://www.wikidata.org/prop/direct/P184,directeur ou directrice de thèse,7
+http://www.wikidata.org/prop/direct/P1207,identifiant NUKAT,7
+http://www.wikidata.org/prop/direct/P4819,identifiant Svenskt Porträttarkiv,7
+http://www.wikidata.org/prop/direct/P5301,identifiant France Culture (OBSOLÈTE),7
+http://www.wikidata.org/prop/direct/P6683,identifiant Bibliothèque Alexander Turnbull,7
+http://www.wikidata.org/prop/direct/P6821,identifiant Alvin,7
+http://www.wikidata.org/prop/direct/P7293,identifiant Bibliothèque nationale de Pologne,7
+http://www.wikidata.org/prop/direct/P271,identifiant NACSIS-CAT d'un auteur,6
+http://www.wikidata.org/prop/direct/P410,grade militaire ou de la police,6
+http://www.wikidata.org/prop/direct/P742,pseudonyme,6
+http://www.wikidata.org/prop/direct/P2397,identifiant de chaîne YouTube,6
+http://www.wikidata.org/prop/direct/P7400,identifiant LibraryThing d'un auteur,6
+http://www.wikidata.org/prop/direct/P8189,identifiant J9U de la Bibliothèque nationale d'Israël,6
+http://www.wikidata.org/prop/direct/P9371,identifiant FranceArchives agent,6
+http://www.wikidata.org/prop/direct/P11496,identifiant CiNii Research,6
+http://www.wikidata.org/prop/direct/P54,membre de l'équipe de sport,5
+http://www.wikidata.org/prop/direct/P691,identifiant Bibliothèque nationale tchèque,5
+http://www.wikidata.org/prop/direct/P1263,identifiant Notable Names Database,5
+http://www.wikidata.org/prop/direct/P1266,identifiant AlloCiné nom,5
+http://www.wikidata.org/prop/direct/P3980,identifiant Unifrance d'une personne,5
+http://www.wikidata.org/prop/direct/P4985,identifiant The Movie Database d'une personne,5
+http://www.wikidata.org/prop/direct/P11841,identifiant Challenges,5
+http://www.wikidata.org/prop/direct/P640,cote Léonore,4
+http://www.wikidata.org/prop/direct/P2168,identifiant Svensk Filmdatabas d'une personne,4
+http://www.wikidata.org/prop/direct/P2218,situation nette,4
+http://www.wikidata.org/prop/direct/P2949,identifiant WikiTree,4
+http://www.wikidata.org/prop/direct/P3040,identifiant SoundCloud,4
+http://www.wikidata.org/prop/direct/P3154,identifiant Projet Runeberg d'un auteur,4
+http://www.wikidata.org/prop/direct/P3987,identifiant SHARE Catalogue,4
+http://www.wikidata.org/prop/direct/P4285,identifiant theses.fr,4
+http://www.wikidata.org/prop/direct/P10199,identifiant F6S,4
+http://www.wikidata.org/prop/direct/P10306,identifiant North Data,4
+http://www.wikidata.org/prop/direct/P11152,identifiant web Léonore,4
+http://www.wikidata.org/prop/direct/P11245,indicateur YouTube,4
+http://www.wikidata.org/prop/direct/P140,religion ou conception du monde,3
+http://www.wikidata.org/prop/direct/P172,groupe ethnique,3
+http://www.wikidata.org/prop/direct/P349,identifiant Bibliothèque nationale de la Diète,3
+http://www.wikidata.org/prop/direct/P241,corps militaire,3
+http://www.wikidata.org/prop/direct/P396,identifiant SBN d'un auteur,3
+http://www.wikidata.org/prop/direct/P434,identifiant MusicBrainz d'un artiste,3
+http://www.wikidata.org/prop/direct/P496,identifiant ORCID,3
+http://www.wikidata.org/prop/direct/P1015,identifiant BIBSYS d'une personne,3
+http://www.wikidata.org/prop/direct/P1026,thèse académique,3
+http://www.wikidata.org/prop/direct/P1066,élève de,3
+http://www.wikidata.org/prop/direct/P1248,identifiant KulturNav,3
+http://www.wikidata.org/prop/direct/P1830,propriétaire de,3
+http://www.wikidata.org/prop/direct/P2038,identifiant ResearchGate d'un auteur enregistré,3
+http://www.wikidata.org/prop/direct/P2037,identifiant GitHub,3
+http://www.wikidata.org/prop/direct/P2650,intéressé(e) par,3
+http://www.wikidata.org/prop/direct/P3537,identifiant FootballDatabase.eu,3
+http://www.wikidata.org/prop/direct/P3814,identifiant The Business of Fashion,3
+http://www.wikidata.org/prop/direct/P4789,identifiant Who's Who UK,3
+http://www.wikidata.org/prop/direct/P6023,identifiant ResearchGate d'un auteur non enregistré,3
+http://www.wikidata.org/prop/direct/P6231,identifiant Base de données des élites suisses,3
+http://www.wikidata.org/prop/direct/P6366,identifiant Microsoft Academic,3
+http://www.wikidata.org/prop/direct/P7176,identifiant d'un profil XING,3
+http://www.wikidata.org/prop/direct/P7682,identifiant Bibliothèque nationale de Nouvelle-Zélande,3
+http://www.wikidata.org/prop/direct/P7763,statut des droits d'auteur du créateur,3
+http://www.wikidata.org/prop/direct/P7847,identifiant DigitaltMuseum,3
+http://www.wikidata.org/prop/direct/P8286,identifiant Olympedia d'une personne,3
+http://www.wikidata.org/prop/direct/P8445,identifiant Our Campaigns d'un candidat,3
+http://www.wikidata.org/prop/direct/P11249,identifiant d’autorité Bibliothèque royale de Belgique,3
+http://www.wikidata.org/prop/direct/P12098,identifiant Kinobox.cz d'une personne,3
+http://www.wikidata.org/prop/direct/P12192,P12192,3
+http://www.wikidata.org/prop/direct/P53,"famille, dynastie ou maison noble",2
+http://www.wikidata.org/prop/direct/P112,fondé par,2
+http://www.wikidata.org/prop/direct/P185,doctorant ou doctorante,2
+http://www.wikidata.org/prop/direct/P413,position de jeu ou spécialité,2
+http://www.wikidata.org/prop/direct/P409,identifiant Bibliothèque nationale d'Australie,2
+http://www.wikidata.org/prop/direct/P968,courriel,2
+http://www.wikidata.org/prop/direct/P1005,identifiant Bibliothèque nationale du Portugal,2
+http://www.wikidata.org/prop/direct/P1045,identifiant Sycomore,2
+http://www.wikidata.org/prop/direct/P1050,affection médicale,2
+http://www.wikidata.org/prop/direct/P1153,identifiant Scopus d'un auteur,2
+http://www.wikidata.org/prop/direct/P1196,circonstances de la mort,2
+http://www.wikidata.org/prop/direct/P1260,identifiant K-samsök,2
+http://www.wikidata.org/prop/direct/P1258,identifiant Rotten Tomatoes,2
+http://www.wikidata.org/prop/direct/P1280,identifiant CONOR.SI,2
+http://www.wikidata.org/prop/direct/P1303,instrument de musique pratiqué,2
+http://www.wikidata.org/prop/direct/P1447,identifiant Sports Reference (archivé),2
+http://www.wikidata.org/prop/direct/P1442,image de la tombe,2
+http://www.wikidata.org/prop/direct/P1581,blog officiel,2
+http://www.wikidata.org/prop/direct/P1801,image de plaque commémorative,2
+http://www.wikidata.org/prop/direct/P1808,identifiant Sénat (France),2
+http://www.wikidata.org/prop/direct/P1953,identifiant Discogs d'un artiste,2
+http://www.wikidata.org/prop/direct/P1977,identifiant Les Archives du spectacle,2
+http://www.wikidata.org/prop/direct/P2048,hauteur,2
+http://www.wikidata.org/prop/direct/P2163,identifiant FAST,2
+http://www.wikidata.org/prop/direct/P2446,identifiant Transfermarkt d'un joueur,2
+http://www.wikidata.org/prop/direct/P2538,identifiant Nationalmuseum d'un artiste,2
+http://www.wikidata.org/prop/direct/P2561,nom,2
+http://www.wikidata.org/prop/direct/P3217,identifiant Dictionnaire biographique suédois,2
+http://www.wikidata.org/prop/direct/P3417,identifiant Quora d'un sujet,2
+http://www.wikidata.org/prop/direct/P3762,identifiant openMLOL d'auteur,2
+http://www.wikidata.org/prop/direct/P3836,identifiant Pinterest,2
+http://www.wikidata.org/prop/direct/P4016,nom d'utilisateur SlideShare,2
+http://www.wikidata.org/prop/direct/P4126,"identifiant Conseil économique, environnemental et social",2
+http://www.wikidata.org/prop/direct/P4123,identifiant Assemblée nationale (France),2
+http://www.wikidata.org/prop/direct/P4411,identifiant Quora d'un utilisateur,2
+http://www.wikidata.org/prop/direct/P4602,date d'enterrement ou de crémation,2
+http://www.wikidata.org/prop/direct/P4619,identifiant Bibliothèque nationale du Brésil,2
+http://www.wikidata.org/prop/direct/P4703,identifiant Haute Autorité pour la transparence de la vie publique,2
+http://www.wikidata.org/prop/direct/P5034,identifiant KRNLK,2
+http://www.wikidata.org/prop/direct/P6178,identifiant Dimensions d'un auteur,2
+http://www.wikidata.org/prop/direct/P7929,identifiant Roglo,2
+http://www.wikidata.org/prop/direct/P8094,identifiant GeneaStar,2
+http://www.wikidata.org/prop/direct/P8214,curriculum vitae,2
+http://www.wikidata.org/prop/direct/P8309,identifiant Yle,2
+http://www.wikidata.org/prop/direct/P10302,identifiant Film.ru d'une personne,2
+http://www.wikidata.org/prop/direct/P11182,identifiant Université de Macédoine,2
+http://www.wikidata.org/prop/direct/P11892,identifiant Threads d'un profil,2
+http://www.wikidata.org/prop/direct/P12007,identifiant Substack d'un profil,2
+http://www.wikidata.org/prop/direct/P12361,identifiant Bluesky,2
+http://www.wikidata.org/prop/direct/P13049,identifiant DDB d'une personne,2
+http://www.wikidata.org/prop/direct/P91,orientation sexuelle,1
+http://www.wikidata.org/prop/direct/P109,signature,1
+http://www.wikidata.org/prop/direct/P127,propriétaire,1
+http://www.wikidata.org/prop/direct/P136,genre artistique,1
+http://www.wikidata.org/prop/direct/P169,directeur général ou directrice générale,1
+http://www.wikidata.org/prop/direct/P451,partenaire de vie,1
+http://www.wikidata.org/prop/direct/P509,cause de la mort,1
+http://www.wikidata.org/prop/direct/P535,identifiant Find a Grave de la tombe,1
+http://www.wikidata.org/prop/direct/P549,identifiant Mathematics Genealogy Project,1
+http://www.wikidata.org/prop/direct/P607,a participé au conflit,1
+http://www.wikidata.org/prop/direct/P1037,dirigé par,1
+http://www.wikidata.org/prop/direct/P1053,identifiant ResearcherID,1
+http://www.wikidata.org/prop/direct/P1214,identifiant Riksdag,1
+http://www.wikidata.org/prop/direct/P1315,identifiant NLA Trove,1
+http://www.wikidata.org/prop/direct/P1340,couleur des yeux,1
+http://www.wikidata.org/prop/direct/P1375,identifiant Bibliothèque nationale et universitaire de Zagreb,1
+http://www.wikidata.org/prop/direct/P1368,identifiant Bibliothèque nationale de Lettonie,1
+http://www.wikidata.org/prop/direct/P1411,nommé ou nommée pour,1
+http://www.wikidata.org/prop/direct/P1449,surnom,1
+http://www.wikidata.org/prop/direct/P1469,identifiant Fédération internationale de football association (archivé),1
+http://www.wikidata.org/prop/direct/P1532,pays de nationalité sportive,1
+http://www.wikidata.org/prop/direct/P1607,identifiant Dialnet d'un auteur,1
+http://www.wikidata.org/prop/direct/P1617,identifiant BBC Things,1
+http://www.wikidata.org/prop/direct/P1651,identifiant de la vidéo YouTube,1
+http://www.wikidata.org/prop/direct/P1695,identifiant Bibliothèque nationale de Pologne (ancien),1
+http://www.wikidata.org/prop/direct/P1712,identifiant Metacritic,1
+http://www.wikidata.org/prop/direct/P1728,identifiant AllMusic d'un artiste,1
+http://www.wikidata.org/prop/direct/P1871,identifiant Consortium of European Research Libraries,1
+http://www.wikidata.org/prop/direct/P1960,identifiant Google Scholar d'un auteur,1
+http://www.wikidata.org/prop/direct/P2020,identifiant Mondefootball.fr,1
+http://www.wikidata.org/prop/direct/P2031,début de la période d'activité,1
+http://www.wikidata.org/prop/direct/P2091,identifiant Fédération internationale des sociétés d'aviron,1
+http://www.wikidata.org/prop/direct/P2188,identifiant BiblioNet d'un auteur,1
+http://www.wikidata.org/prop/direct/P2323,identifiant Comité olympique suédois,1
+http://www.wikidata.org/prop/direct/P2383,identifiant La France savante CTHS,1
+http://www.wikidata.org/prop/direct/P2387,identifiant Elonet d'un acteur,1
+http://www.wikidata.org/prop/direct/P2447,identifiant Transfermarkt d'un manager,1
+http://www.wikidata.org/prop/direct/P2459,identifiant Union internationale de biathlon,1
+http://www.wikidata.org/prop/direct/P2574,identifiant National Football Teams d'un joueur,1
+http://www.wikidata.org/prop/direct/P2611,identificateur d'orateur de la conférence TED,1
+http://www.wikidata.org/prop/direct/P2626,identifiant Det Danske Filminstitut d'une personne,1
+http://www.wikidata.org/prop/direct/P2773,identifiant FIS d'un fondeur,1
+http://www.wikidata.org/prop/direct/P2798,identifiant Loop,1
+http://www.wikidata.org/prop/direct/P3267,identifiant Flickr,1
+http://www.wikidata.org/prop/direct/P3430,identifiant Social Networks Archival Context,1
+http://www.wikidata.org/prop/direct/P3479,identifiant Omni,1
+http://www.wikidata.org/prop/direct/P3509,identifiant Dagens Nyheter,1
+http://www.wikidata.org/prop/direct/P3544,identifiant Te Papa Tongarewa,1
+http://www.wikidata.org/prop/direct/P3554,identifiant World Series of Poker,1
+http://www.wikidata.org/prop/direct/P3564,Identifiant Global Poker Index,1
+http://www.wikidata.org/prop/direct/P3599,identifiant Producteur aux Archives nationales,1
+http://www.wikidata.org/prop/direct/P3618,base salariale,1
+http://www.wikidata.org/prop/direct/P3666,identifiant European Professional Club Rugby,1
+http://www.wikidata.org/prop/direct/P3726,identifiant Eu-football.info d'un joueur,1
+http://www.wikidata.org/prop/direct/P3846,identifiant DBC,1
+http://www.wikidata.org/prop/direct/P3913,identifiant MobyGames d'un développeur,1
+http://www.wikidata.org/prop/direct/P3943,identifiant Tumblr,1
+http://www.wikidata.org/prop/direct/P3747,identifiant Social Science Research Network d'un auteur,1
+http://www.wikidata.org/prop/direct/P3829,identifiant Publons d'un auteur,1
+http://www.wikidata.org/prop/direct/P4015,identifiant Vimeo,1
+http://www.wikidata.org/prop/direct/P4342,identifiant Store norske leksikon,1
+http://www.wikidata.org/prop/direct/P4359,identifiant Gravsted.dk,1
+http://www.wikidata.org/prop/direct/P4638,identifiant The Peerage,1
+http://www.wikidata.org/prop/direct/P4666,identifiant CineMagia d'un acteur,1
+http://www.wikidata.org/prop/direct/P4782,identifiant Movieplayer d'une personne,1
+http://www.wikidata.org/prop/direct/P4804,identifiant Compagnon de la Libération,1
+http://www.wikidata.org/prop/direct/P4891,identifiant Patrons de France,1
+http://www.wikidata.org/prop/direct/P4963,identifiant Svenskt kvinnobiografiskt lexikon,1
+http://www.wikidata.org/prop/direct/P5019,identifiant Brockhaus Enzyklopädie,1
+http://www.wikidata.org/prop/direct/P5243,identifiant Canal-U d'une personne,1
+http://www.wikidata.org/prop/direct/P5259,identifiant Gravstensinventeringen,1
+http://www.wikidata.org/prop/direct/P5491,identifiant BD Gest' d'un auteur,1
+http://www.wikidata.org/prop/direct/P5508,identifiant archINFORM d'une personne ou d'un bureau,1
+http://www.wikidata.org/prop/direct/P5298,identifiant Webb-site de personne,1
+http://www.wikidata.org/prop/direct/P5306,identifiant League of Nations Search Engine,1
+http://www.wikidata.org/prop/direct/P5378,identifiant Akadem (obsolète),1
+http://www.wikidata.org/prop/direct/P5389,résident permanent de,1
+http://www.wikidata.org/prop/direct/P5534,identifiant Open Media Database d'une personne,1
+http://www.wikidata.org/prop/direct/P5617,identifiant Evene,1
+http://www.wikidata.org/prop/direct/P5695,identifiant Bibliopoche,1
+http://www.wikidata.org/prop/direct/P5797,identifiant d'une chaine Twitch,1
+http://www.wikidata.org/prop/direct/P5952,identifiant Annuaire rétrospectif de la magistrature,1
+http://www.wikidata.org/prop/direct/P6083,identifiant Cineuropa d'une personne,1
+http://www.wikidata.org/prop/direct/P6146,identifiant The Hendon Mob,1
+http://www.wikidata.org/prop/direct/P6219,identifiant TASS,1
+http://www.wikidata.org/prop/direct/P6262,identifiant Fandom d'un article,1
+http://www.wikidata.org/prop/direct/P6325,identifiant Critique d'art,1
+http://www.wikidata.org/prop/direct/P6548,identifiant NZ On Screen d'une personne,1
+http://www.wikidata.org/prop/direct/P6668,identifiant theatre-contemporain.net,1
+http://www.wikidata.org/prop/direct/P6664,identifiant Le Vif d'un sujet,1
+http://www.wikidata.org/prop/direct/P6802,image en rapport,1
+http://www.wikidata.org/prop/direct/P6817,identifiant SVT Play,1
+http://www.wikidata.org/prop/direct/P6844,identifiant abART d'une personne,1
+http://www.wikidata.org/prop/direct/P7040,identifiant NosDéputés.fr,1
+http://www.wikidata.org/prop/direct/P7085,identifiant TikTok d'un utilisateur,1
+http://www.wikidata.org/prop/direct/P7081,citation ou extrait,1
+http://www.wikidata.org/prop/direct/P7171,identifiant Hacker News d'utilisateur,1
+http://www.wikidata.org/prop/direct/P7300,identifiant MUBI pour une personne,1
+http://www.wikidata.org/prop/direct/P7445,identifiant Basis Wien d’une personne,1
+http://www.wikidata.org/prop/direct/P7574,identifiant théâtre royal dramatique,1
+http://www.wikidata.org/prop/direct/P7699,identifiant Lietuvos nacionalinė Martyno Mažvydo biblioteka,1
+http://www.wikidata.org/prop/direct/P7902,identifiant Deutsche Biographie,1
+http://www.wikidata.org/prop/direct/P7911,identifiant Gamekult d’une société,1
+http://www.wikidata.org/prop/direct/P7918,identifiant Médias 19,1
+http://www.wikidata.org/prop/direct/P8168,identifiant FactGrid d'un élément,1
+http://www.wikidata.org/prop/direct/P8207,identifiant The Conversation,1
+http://www.wikidata.org/prop/direct/P8313,identifiant Lex,1
+http://www.wikidata.org/prop/direct/P8388,identifiant universel unique Riksdagen,1
+http://www.wikidata.org/prop/direct/P8899,identifiant Arken,1
+http://www.wikidata.org/prop/direct/P8971,identifiant Cinémathèque québécoise d'une personne,1
+http://www.wikidata.org/prop/direct/P8990,identifiant Fédération internationale des sociétés d'aviron (UUID),1
+http://www.wikidata.org/prop/direct/P9097,identifiant American Academy in Rome,1
+http://www.wikidata.org/prop/direct/P9264,identifiant Fédération française de football,1
+http://www.wikidata.org/prop/direct/P9495,identifiant samlingar.shm.se d'une entité,1
+http://www.wikidata.org/prop/direct/P9743,identifiant Podchaser d'un créateur,1
+http://www.wikidata.org/prop/direct/P9825,identifiant allabolag,1
+http://www.wikidata.org/prop/direct/P9984,identifiant CANTIC,1
+http://www.wikidata.org/prop/direct/P10069,identifiant Tabakalera,1
+http://www.wikidata.org/prop/direct/P10283,identifiant OpenAlex,1
+http://www.wikidata.org/prop/direct/P10387,identifiant Databazeknih.cz d'un auteur,1
+http://www.wikidata.org/prop/direct/P10757,identifiant Personality Database,1
+http://www.wikidata.org/prop/direct/P10861,identifiant Springer Nature,1
+http://www.wikidata.org/prop/direct/P11012,identifiant du Knowledge Graph de l'UE,1
+http://www.wikidata.org/prop/direct/P11079,identifiant Linktree,1
+http://www.wikidata.org/prop/direct/P11194,Identifiant Famous Birthdays,1
+http://www.wikidata.org/prop/direct/P11686,identifiant Université de Barcelone,1
+http://www.wikidata.org/prop/direct/P12214,identifiant Akadem,1
+http://www.wikidata.org/prop/direct/P12458,identifiant Parsifal,1
+http://www.wikidata.org/prop/direct/P12749,identifiant SNARC,1
+http://www.wikidata.org/prop/direct/P12800,article dans Vikidia,1
+http://www.wikidata.org/prop/direct/P13051,Identifiant CIRDOC d'un auteur ou d'une autrice,1
+http://www.wikidata.org/prop/direct/P13255,identifiant L'Humanité d'un sujet,1
+http://www.wikidata.org/prop/direct/P13455,identifiant Dezède d'un individu,1
