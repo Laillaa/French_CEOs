@@ -24,8 +24,7 @@ SELECT DISTINCT ?item  ?itemLabel  ?gender ?year
             {?item wdt:P27  wd:Q142} # country of citizenship: France
             UNION
             {?item wdt:P27  wd:Q34} # country of citizenship: Sweden
-            UNION
-            {?item wdt:P27  wd:Q145} # country of citizenship: UK   
+ 
           
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
                 wdt:P569 ?birthDate;
@@ -74,8 +73,6 @@ CONSTRUCT
             {?item wdt:P27  wd:Q142} # country of citizenship: France
             UNION
             {?item wdt:P27  wd:Q34} # country of citizenship: Sweden
-            UNION
-            {?item wdt:P27  wd:Q145} # country of citizenship: UK   
           
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
                 wdt:P569 ?birthDate;
@@ -137,9 +134,7 @@ INSERT {
             
             {?item wdt:P27  wd:Q142} # country of citizenship: France
             UNION
-            {?item wdt:P27  wd:Q34} # country of citizenship: Sweden
-            UNION
-            {?item wdt:P27  wd:Q145} # country of citizenship: UK   
+            {?item wdt:P27  wd:Q34} # country of citizenship: Sweden  
           
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
                 wdt:P569 ?birthDate;
