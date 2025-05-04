@@ -9,7 +9,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?s a wd:Q5.}
 }
 
@@ -22,7 +22,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?s ?label ?birthYear
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?s a wd:Q5;
             rdfs:label ?label;
             wdt:P569 ?birthYear}
@@ -47,7 +47,7 @@ CONSTRUCT {?item wdt:P27 ?citizenship.
             ?citizenship rdfs:label ?citizenshipLabel}
 WHERE
     {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
 
         ## Find the persons in the imported graph
         {SELECT ?item
@@ -83,7 +83,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 
-WITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+WITH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
 INSERT {?item wdt:P27 ?citizenship.}
 WHERE
     {
@@ -116,7 +116,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 
 INSERT DATA {
-  GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+  GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
   {wdt:P27 rdfs:label 'country of citizenship'.}
 }
 ```
@@ -131,7 +131,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
     SELECT (COUNT(*) as ?n) 
     WHERE {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
             {
                 ?s wdt:P27 ?o.
             }
@@ -146,7 +146,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT (COUNT(*) as ?n)
 WHERE 
-{GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+{GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         
     {?item a wd:Q5;
         rdfs:label ?label.
@@ -165,7 +165,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?item ?label
 WHERE 
-{GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+{GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         
     {?item a wd:Q5;
         rdfs:label ?label.
@@ -188,7 +188,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?citizenship ?citizenshipLabel (COUNT(*) as ?n) 
 WHERE {
-GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
 {
    ?item wdt:P27 ?citizenship.
     ?citizenship rdfs:label ?citizenshipLabel.
@@ -202,126 +202,8 @@ LIMIT 5
 ```
 ### Add missing citizenships
 
-On April 2nd, 2025 a number of citizenships are missing in the SPARQL endpoint of Wikidata as wdt:P27 properties but they are present in the statements: cf. following example
+There are no missing citizenships
 
-
-
-```sparql
-### test a specific person
-
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
-
-SELECT ?item ?o ?p ?statement_o
-    {
-
-        ## 
-        SERVICE <https://query.wikidata.org/sparql>
-            {
-                 
-                BIND(<http://www.wikidata.org/entity/Q1001072> as ?item)
-                {
-                    ?item ?p ?statement_o.
-                    FILTER(contains(str(?p), 'P27'))
-                }
-                OPTIONAL{
-                    ?item wdt:P27 ?o.
-                }
-
-            }
-                
-        }
-```
-
-```sparql
-### Get the country value
-
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX ps: <http://www.wikidata.org/prop/statement/>
-PREFIX wikibase: <http://wikiba.se/ontology#>
-PREFIX bd: <http://www.bigdata.com/rdf#>
-
-
-
-SELECT ?item ?os ?osLabel
-
-WHERE
-    {
-
-        ## 
-        SERVICE <https://query.wikidata.org/sparql>
-        {
-            {
-
-                BIND(<http://www.wikidata.org/entity/Q1001072> as ?item)
-                ?item p:P27 [ps:P27 ?os]
-
-                BIND(?osLabel AS ?osLabel)
-                SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-            }        
-                
-        }
-    }
-```
-
-```sparql
-### Get the country value
-
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX ps: <http://www.wikidata.org/prop/statement/>
-PREFIX wikibase: <http://wikiba.se/ontology#>
-PREFIX bd: <http://www.bigdata.com/rdf#>
-
-
-
-SELECT ?item ?os ?osLabel
-
-WHERE
-    {
-
-        {SELECT ?item
-        WHERE 
-                {?item a wd:Q5.
-                MINUS {
-                        ?item wdt:P27 ?country   .
-                    }  
-        }
-                
-        ORDER BY ?item  
-       
-        }
-
-        ## 
-        SERVICE <https://query.wikidata.org/sparql>
-        {
-            {
-
-                ?item p:P27 [ps:P27 ?os]
-
-                BIND(?osLabel AS ?osLabel)
-                SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-            }        
-                
-        }
-    }
-    LIMIT 20
-```
-### Conslusion about missing citizenships
-
-Apparently, there are only five persons with this special situation, all other around 8700 are missing, as a quick inspection shows.
-
-They will be excluded from the analysis
 ### Inspect the available information
 
 With the queries [in this sparqlbook](wdt_available_information.sparqlbook) you can inspect the available information
@@ -337,7 +219,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?p ?label (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?s a wd:Q5;
             ?p ?o.
         OPTIONAL {?p rdfs:label ?label}    
@@ -366,7 +248,7 @@ WHERE {
     {
     SELECT DISTINCT ?country
     WHERE {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
             {
                 ?s wdt:P27 ?country.
             }
@@ -394,7 +276,7 @@ PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
-WITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md> 
+WITH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md> 
 INSERT  {
     ?citizenship rdfs:label ?citizenshipLabel.
 }
@@ -433,7 +315,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?citizenship ?citizenshipLabel (COUNT(*) as ?n)
 WHERE {
-GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
 {
    ?s wdt:P27 ?citizenship.
    ?citizenship rdfs:label ?citizenshipLabel.
@@ -460,7 +342,7 @@ WHERE
    {
    SELECT DISTINCT ?country
    WHERE {
-      GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+      GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
          {
             ?s wdt:P27 ?country.
          }
@@ -477,7 +359,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
-WITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+WITH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
 INSERT {
    ?country rdf:type wd:Q6256.
 }
@@ -501,7 +383,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 INSERT DATA {
-GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
     {    wd:Q6256 rdfs:label "Country".
     }    
 }
@@ -520,7 +402,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?citizenshipLabel; separator=", ") AS ?countries )
 WHERE {
-GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
 {
    ?item wdt:P27 ?citizenship.
     ?citizenship rdfs:label ?citizenshipLabel.
@@ -548,7 +430,7 @@ SELECT (COUNT(*) AS ?no)
 WHERE {
     SELECT ?item (COUNT(*) as ?n)
     WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
     {
     ?item wdt:P27 ?citizenship.
         ?citizenship rdfs:label ?citizenshipLabel.
@@ -579,7 +461,7 @@ WHERE {
     {
     SELECT DISTINCT ?citizenship
     WHERE {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
             {
                 ?s wdt:P27 ?citizenship.
             }
@@ -609,7 +491,7 @@ PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
-WITH  <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>   
+WITH  <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>   
 INSERT  {
     ?citizenship wdt:P30 ?continent.
     ?continent rdfs:label ?continentLabel.
@@ -649,7 +531,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 
 INSERT DATA {
-  GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+  GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
   {wdt:P30 rdfs:label 'continent'.}
 }
 ```
@@ -669,7 +551,7 @@ WHERE
    {
    SELECT DISTINCT ?continent
    WHERE {
-      GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+      GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
          {
             ?s wdt:P30 ?continent.
          }
@@ -686,7 +568,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
-WITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+WITH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
 INSERT {
    ?continent rdf:type wd:Q5107.
 }
@@ -710,7 +592,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 INSERT DATA {
-GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
     {    wd:Q5107 rdfs:label "Continent".
     }    
 }
@@ -731,7 +613,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?continent ?continentLabel (COUNT(*) as ?n)
 WHERE {
-GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
 {
    ?s wdt:P27 ?country.
    ?country wdt:P30 ?continent.
@@ -750,29 +632,28 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-
-SELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?continentLabel; separator=", ") AS ?continents )
-    ( GROUP_CONCAT(?countryLabel; separator=", ") AS ?countries )
+SELECT ?item (COUNT(*) as ?n) 
+       (GROUP_CONCAT(?continentLabel; separator=", ") AS ?continents)
+       (GROUP_CONCAT(?countryLabel; separator=", ") AS ?countries)
 WHERE {
-    SELECT DISTINCT ?item ?continentLabel ?coutryLabel
-    WHERE 
-        {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
-            {
-            ?item wdt:P27 ?country.
-            ?country wdt:P30 ?continent;
-                rdfs:label ?countryLabel.
-            ?continent rdfs:label ?continentLabel.
-            ## Excluding Eurasia, Australia and Oceania insular
-            FILTER ( ?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))
-            }
-        }
+  SELECT DISTINCT ?item ?continentLabel ?countryLabel
+  WHERE {
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md> {
+      ?item wdt:P27 ?country.
+      ?country wdt:P30 ?continent;
+               rdfs:label ?countryLabel.
+      ?continent rdfs:label ?continentLabel.
+      ## Excluding Eurasia, Australia and Insular Oceania
+      FILTER ( ?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))
+    }
+  }
 }
 GROUP BY ?item
-#HAVING (?n > 1)
+# HAVING (?n > 1)
 ORDER BY DESC(?n)
-#OFFSET 10
+# OFFSET 10
 LIMIT 10
 ```
 
@@ -793,7 +674,7 @@ WHERE {
     # ?countryLabel
     WHERE 
         {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
             {
             ?item wdt:P27 ?country.
             ?country wdt:P30 ?continent;
@@ -828,7 +709,7 @@ WHERE {
         SELECT DISTINCT ?item ?continentLabel
         WHERE 
             {
-            GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+            GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
                 {
                 ?item wdt:P27 ?country.
                 ?country wdt:P30 ?continent.
