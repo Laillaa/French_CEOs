@@ -2,13 +2,13 @@ p,propLabel,eff
 http://www.wikidata.org/prop/direct/P106,occupation,985
 http://www.wikidata.org/prop/direct/P108,employé(e) par,640
 http://www.wikidata.org/prop/direct/P69,scolarité,546
-http://www.wikidata.org/prop/direct/P735,prénom,537
+http://www.wikidata.org/prop/direct/P735,prénom,539
 http://www.wikidata.org/prop/direct/P1412,"langues parlées, écrites ou signées",438
 http://www.wikidata.org/prop/direct/P27,pays de nationalité,417
 http://www.wikidata.org/prop/direct/P21,sexe ou genre,406
 http://www.wikidata.org/prop/direct/P31,nature de l’élément,406
 http://www.wikidata.org/prop/direct/P569,date de naissance,406
-http://www.wikidata.org/prop/direct/P734,nom de famille,347
+http://www.wikidata.org/prop/direct/P734,nom de famille,348
 http://www.wikidata.org/prop/direct/P19,lieu de naissance,301
 http://www.wikidata.org/prop/direct/P2671,identifiant du Google Knowledge Graph,236
 http://www.wikidata.org/prop/direct/P463,membre de,216
@@ -29,7 +29,7 @@ http://www.wikidata.org/prop/direct/P373,catégorie Commons,72
 http://www.wikidata.org/prop/direct/P1268,représente,72
 http://www.wikidata.org/prop/direct/P570,date de mort,71
 http://www.wikidata.org/prop/direct/P7845,Identifiant MarketScreener,71
-http://www.wikidata.org/prop/direct/P13253,identifiant Pappers d'un dirigeant,63
+http://www.wikidata.org/prop/direct/P13253,identifiant Pappers d'un dirigeant,65
 http://www.wikidata.org/prop/direct/P1344,participant à,56
 http://www.wikidata.org/prop/direct/P6621,identifiant Le Figaro d'un sujet,56
 http://www.wikidata.org/prop/direct/P5008,projet Wikimédia s’intéressant à l'élément,55
@@ -42,9 +42,9 @@ http://www.wikidata.org/prop/direct/P20,lieu de mort,39
 http://www.wikidata.org/prop/direct/P268,identifiant Bibliothèque nationale de France,39
 http://www.wikidata.org/prop/direct/P3052,identifiant Bloomberg d'une personne,36
 http://www.wikidata.org/prop/direct/P2087,identifiant Crunchbase d'une personne,34
+http://www.wikidata.org/prop/direct/P553,a un compte sur,32
 http://www.wikidata.org/prop/direct/P1327,partenaire professionnel ou sportif,32
 http://www.wikidata.org/prop/direct/P1559,nom dans la langue maternelle de la personne,32
-http://www.wikidata.org/prop/direct/P553,a un compte sur,31
 http://www.wikidata.org/prop/direct/P1477,nom de naissance,29
 http://www.wikidata.org/prop/direct/P2003,identifiant Instagram d'un profil,29
 http://www.wikidata.org/prop/direct/P8687,nombre d'abonnés d'un média social,29
@@ -122,6 +122,7 @@ http://www.wikidata.org/prop/direct/P54,membre de l'équipe de sport,5
 http://www.wikidata.org/prop/direct/P691,identifiant Bibliothèque nationale tchèque,5
 http://www.wikidata.org/prop/direct/P1263,identifiant Notable Names Database,5
 http://www.wikidata.org/prop/direct/P1266,identifiant AlloCiné nom,5
+http://www.wikidata.org/prop/direct/P2562,nom marital,5
 http://www.wikidata.org/prop/direct/P3980,identifiant Unifrance d'une personne,5
 http://www.wikidata.org/prop/direct/P4985,identifiant The Movie Database d'une personne,5
 http://www.wikidata.org/prop/direct/P11841,identifiant Challenges,5
@@ -129,8 +130,8 @@ http://www.wikidata.org/prop/direct/P640,cote Léonore,4
 http://www.wikidata.org/prop/direct/P2168,identifiant Svensk Filmdatabas d'une personne,4
 http://www.wikidata.org/prop/direct/P2218,situation nette,4
 http://www.wikidata.org/prop/direct/P2949,identifiant WikiTree,4
-http://www.wikidata.org/prop/direct/P3040,identifiant SoundCloud,4
 http://www.wikidata.org/prop/direct/P3154,identifiant Projet Runeberg d'un auteur,4
+http://www.wikidata.org/prop/direct/P3040,identifiant SoundCloud,4
 http://www.wikidata.org/prop/direct/P3987,identifiant SHARE Catalogue,4
 http://www.wikidata.org/prop/direct/P4285,identifiant theses.fr,4
 http://www.wikidata.org/prop/direct/P10199,identifiant F6S,4
@@ -208,8 +209,8 @@ http://www.wikidata.org/prop/direct/P4703,identifiant Haute Autorité pour la tr
 http://www.wikidata.org/prop/direct/P5034,identifiant KRNLK,2
 http://www.wikidata.org/prop/direct/P6178,identifiant Dimensions d'un auteur,2
 http://www.wikidata.org/prop/direct/P7929,identifiant Roglo,2
-http://www.wikidata.org/prop/direct/P8094,identifiant GeneaStar,2
 http://www.wikidata.org/prop/direct/P8214,curriculum vitae,2
+http://www.wikidata.org/prop/direct/P8094,identifiant GeneaStar,2
 http://www.wikidata.org/prop/direct/P8309,identifiant Yle,2
 http://www.wikidata.org/prop/direct/P10302,identifiant Film.ru d'une personne,2
 http://www.wikidata.org/prop/direct/P11182,identifiant Université de Macédoine,2
@@ -269,13 +270,13 @@ http://www.wikidata.org/prop/direct/P3554,identifiant World Series of Poker,1
 http://www.wikidata.org/prop/direct/P3564,Identifiant Global Poker Index,1
 http://www.wikidata.org/prop/direct/P3599,identifiant Producteur aux Archives nationales,1
 http://www.wikidata.org/prop/direct/P3618,base salariale,1
+http://www.wikidata.org/prop/direct/P3747,identifiant Social Science Research Network d'un auteur,1
+http://www.wikidata.org/prop/direct/P3829,identifiant Publons d'un auteur,1
 http://www.wikidata.org/prop/direct/P3666,identifiant European Professional Club Rugby,1
 http://www.wikidata.org/prop/direct/P3726,identifiant Eu-football.info d'un joueur,1
 http://www.wikidata.org/prop/direct/P3846,identifiant DBC,1
 http://www.wikidata.org/prop/direct/P3913,identifiant MobyGames d'un développeur,1
 http://www.wikidata.org/prop/direct/P3943,identifiant Tumblr,1
-http://www.wikidata.org/prop/direct/P3747,identifiant Social Science Research Network d'un auteur,1
-http://www.wikidata.org/prop/direct/P3829,identifiant Publons d'un auteur,1
 http://www.wikidata.org/prop/direct/P4015,identifiant Vimeo,1
 http://www.wikidata.org/prop/direct/P4342,identifiant Store norske leksikon,1
 http://www.wikidata.org/prop/direct/P4359,identifiant Gravsted.dk,1
@@ -288,12 +289,12 @@ http://www.wikidata.org/prop/direct/P4963,identifiant Svenskt kvinnobiografiskt 
 http://www.wikidata.org/prop/direct/P5019,identifiant Brockhaus Enzyklopädie,1
 http://www.wikidata.org/prop/direct/P5243,identifiant Canal-U d'une personne,1
 http://www.wikidata.org/prop/direct/P5259,identifiant Gravstensinventeringen,1
-http://www.wikidata.org/prop/direct/P5491,identifiant BD Gest' d'un auteur,1
-http://www.wikidata.org/prop/direct/P5508,identifiant archINFORM d'une personne ou d'un bureau,1
 http://www.wikidata.org/prop/direct/P5298,identifiant Webb-site de personne,1
 http://www.wikidata.org/prop/direct/P5306,identifiant League of Nations Search Engine,1
 http://www.wikidata.org/prop/direct/P5378,identifiant Akadem (obsolète),1
 http://www.wikidata.org/prop/direct/P5389,résident permanent de,1
+http://www.wikidata.org/prop/direct/P5491,identifiant BD Gest' d'un auteur,1
+http://www.wikidata.org/prop/direct/P5508,identifiant archINFORM d'une personne ou d'un bureau,1
 http://www.wikidata.org/prop/direct/P5534,identifiant Open Media Database d'une personne,1
 http://www.wikidata.org/prop/direct/P5617,identifiant Evene,1
 http://www.wikidata.org/prop/direct/P5695,identifiant Bibliopoche,1
