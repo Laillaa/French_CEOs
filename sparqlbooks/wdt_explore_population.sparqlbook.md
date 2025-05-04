@@ -94,7 +94,6 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
     }  
 ```
-list: 299 CEOs
 
 The Swedish CEOs
 ```sparql
@@ -112,7 +111,6 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
     }  
 ```
-list: 102 CEOs
 
 The New Zealand CEOs
 ```sparql
@@ -130,7 +128,6 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
     }  
 ```
-list: 122 CEOs
 
 ### Count how many properties are available for the considered population
 
