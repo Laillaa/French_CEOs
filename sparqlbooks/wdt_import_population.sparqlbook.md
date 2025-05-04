@@ -25,7 +25,7 @@ SELECT DISTINCT ?item  ?itemLabel  ?gender ?year
             UNION
             {?item wdt:P27  wd:Q34} # country of citizenship: Sweden
             UNION
-            {?item wdt:P27  wd:Q664} # country of citizenship: Sweden
+            {?item wdt:P27  wd:Q664} # country of citizenship: New Zealand 
  
           
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
@@ -76,7 +76,7 @@ CONSTRUCT
             UNION
             {?item wdt:P27  wd:Q34} # country of citizenship: Sweden
             UNION
-            {?item wdt:P27  wd:Q664} # country of citizenship: Sweden
+            {?item wdt:P27  wd:Q664} # country of citizenship: New Zealand 
 
           
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
@@ -141,7 +141,7 @@ INSERT {
             UNION
             {?item wdt:P27  wd:Q34} # country of citizenship: Sweden
             UNION
-            {?item wdt:P27  wd:Q664} # country of citizenship: Sweden
+            {?item wdt:P27  wd:Q664} # country of citizenship: New Zealand 
 
           
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
