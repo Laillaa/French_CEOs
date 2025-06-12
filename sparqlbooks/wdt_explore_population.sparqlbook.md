@@ -25,7 +25,6 @@ WHERE {
     FILTER(xsd:integer(?year) > 1800 )
 }
 ```
-2903 CEOs born from 1800 onward (All nationalities)
 
 #### Gives us the list of:
 
