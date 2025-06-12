@@ -163,7 +163,6 @@ WHERE {
 
     BIND(REPLACE(str(?birthDate), "(.*)([0-9]{4})(.*)", "$2") AS ?year)
     FILTER(xsd:integer(?year) > 1800)
-    #FILTER(?country = "France") # country of citizenship: France
 
 
 }
