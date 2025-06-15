@@ -12,14 +12,19 @@
 - formation
 - occupation
 - publications
+- Langue(s) parlée(s)
 
+### Formation
+- Parcours poursuivi (économie, ingénieurie...)
+- Université
+- Diplôme(s) obtenu(s)
+- Date d'obtention du/des diplôme(s)
 
 ### Organisation
 - nom
 - type
 - siège
 - fondation
-
 
 ### Lieu
 - nom
