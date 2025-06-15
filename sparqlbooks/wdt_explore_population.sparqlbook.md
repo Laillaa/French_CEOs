@@ -9,8 +9,20 @@ Countries: France, Sweden & New Zealand
 
 ### Inspect CEOs 
 
-#### Modern ceos: born from 1800 onward
 ```sparql
+## Count the total number of ceos
+SELECT (COUNT(*) as ?eff)
+WHERE {
+    ?item wdt:P31 wd:Q5;  # Any instance of a human.
+
+        wdt:P106 wd:Q484876  # Occupation: CEO
+}  
+#LIMIT 10
+
+```
+
+```sparql
+## Modern ceos: born from 1800 onward
 SELECT (count(*) as ?number)
 WHERE {
     {?item wdt:P106 wd:Q484876}  # Occupation: CEO
@@ -24,106 +36,44 @@ WHERE {
 }
 ```
 
-#### Gives us the list of:
+### Inspect CEOs of interest
 
-The French CEOs
 ```sparql
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+## Count the total number of ceos
+SELECT (COUNT(*) as ?eff)
+WHERE {
+    ?item wdt:P31 wd:Q5;  # Any instance of a human.
 
-   ## Count and inspect occupations and fields of work
-   SELECT ?item ##(COUNT(*) as ?eff)
-    WHERE {
-        ?item wdt:P31 wd:Q5;  # Any instance of a human.
+        wdt:P106 wd:Q484876  # Occupation: CEO
 
-            wdt:P106 wd:Q484876; # Occupation: CEO
-            wdt:P27 wd:Q142 # country of citizenship: France
+    {?item wdt:P27 wd:Q142} # country of citizenship: France
+    UNION
+    {?item wdt:P27 wd:Q34} # country of citizenship: Sweden
+    UNION
+    {?item wdt:P27 wd:Q664} # country of citizenship: New Zealand
+}  
+#LIMIT 10
 
-    }  
 ```
 
-The Swedish CEOs
 ```sparql
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+## Modern ceos: born from 1800 onward
+SELECT (count(*) as ?number)
+WHERE {
+    {?item wdt:P106 wd:Q484876}  # Occupation: CEO
+    
+    ?item wdt:P31 wd:Q5; # Any instance of a human.
+            wdt:P569 ?birthDate.
+    {?item wdt:P27 wd:Q142} # country of citizenship: France
+    UNION
+    {?item wdt:P27 wd:Q34} # country of citizenship: Sweden
+    UNION
+    {?item wdt:P27 wd:Q664} # country of citizenship: New Zealand
+    
 
-   ## Count and inspect occupations and fields of work
-   SELECT ?item ##(COUNT(*) as ?eff)
-    WHERE {
-        ?item wdt:P31 wd:Q5;  # Any instance of a human.
-
-            wdt:P106 wd:Q484876; # Occupation: CEO
-            wdt:P27 wd:Q34 # country of citizenship: Sweden
-
-    }  
-```
-
-The New Zealand CEOs
-```sparql
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-
-   ## Count and inspect occupations and fields of work
-   SELECT ?item ##(COUNT(*) as ?eff)
-    WHERE {
-        ?item wdt:P31 wd:Q5;  # Any instance of a human.
-
-            wdt:P106 wd:Q484876; # Occupation: CEO
-            wdt:P27 wd:Q664 # country of citizenship: New Zealand
-
-    } 
-```
-
-#### Gives us the n. of ceos.
-
-The French CEOs
-```sparql
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-
-   ## Count and inspect occupations and fields of work
-   SELECT (count(*) as ?number)
-    WHERE {
-        ?item wdt:P31 wd:Q5;  # Any instance of a human.
-
-            wdt:P106 wd:Q484876; # Occupation: CEO
-            wdt:P27 wd:Q142 # country of citizenship: France
-
-    }  
-```
-
-The Swedish CEOs
-```sparql
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-
-   ## Count and inspect occupations and fields of work
-   #SELECT ?item ##(COUNT(*) as ?eff)
-   SELECT (count(*) as ?number)
-    WHERE {
-        ?item wdt:P31 wd:Q5;  # Any instance of a human.
-
-            wdt:P106 wd:Q484876; # Occupation: CEO
-            wdt:P27 wd:Q34 # country of citizenship: Sweden
-
-    }  
-```
-
-The New Zealand CEOs
-```sparql
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-
-   ## Count and inspect occupations and fields of work
-   #SELECT ?item ##(COUNT(*) as ?eff)
-   SELECT (count(*) as ?number)
-    WHERE {
-        ?item wdt:P31 wd:Q5;  # Any instance of a human.
-
-            wdt:P106 wd:Q484876; # Occupation: CEO
-            wdt:P27 wd:Q664 # country of citizenship: New Zealand
-
-    }  
+    BIND(REPLACE(str(?birthDate), "(.*)([0-9]{4})(.*)", "$2") AS ?year)
+    FILTER(xsd:integer(?year) > 1800 )
+}
 ```
 
 ### Count how many properties are available for the considered population
