@@ -206,7 +206,7 @@ There are no missing citizenships
 
 ### Inspect the available information
 
-With the queries [in this sparqlbook](wdt_available_information.sparqlbook) you can inspect the available information
+With the queries [in this sparqlbook](wdt_available_information.sparqlbook.md) you can inspect the available information
 
 ```sparql
 ### Basic query about persons' properties
