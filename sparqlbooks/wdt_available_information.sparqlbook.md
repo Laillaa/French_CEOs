@@ -9,7 +9,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?class ?classLabel (COUNT(*) AS ?n)
 WHERE {
-    GRAPH  <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>   
+    GRAPH  <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md> 
     {
         ?s rdf:type ?class.
         OPTIONAL {?class rdfs:label ?classLabel}
@@ -27,7 +27,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?p ?pLabel (COUNT(*) AS ?n)
 WHERE {
-    GRAPH  <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>   
+    GRAPH  <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md> 
     {
         ?s ?p ?o.
         OPTIONAL {?p rdfs:label ?pLabel}
@@ -48,7 +48,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?s a wd:Q5;
         rdfs:label ?label.
           }
@@ -65,7 +65,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?s a wd:Q5
           }
 }
@@ -84,7 +84,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?p ?label (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?s a wd:Q5;
             ?p ?o.
         OPTIONAL {?p rdfs:label ?label}    
@@ -104,7 +104,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 
 INSERT DATA {
-  GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+  GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
   {rdf:type rdfs:label 'has type'.}
 }
 ```
@@ -119,7 +119,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 
 INSERT DATA {
-  GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+  GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
   {rdfs:label rdfs:label 'has label'.}
 }
 ```
@@ -131,7 +131,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT (min(?birthDate) as ?minDate) (max(?birthDate) as ?maxDate)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?s a wd:Q5;
            wdt:P569 ?birthDate.
           }
@@ -151,7 +151,7 @@ PREFIX bd: <http://www.bigdata.com/rdf#>
 
 SELECT (COUNT(*) as ?n)
 WHERE {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?item a wd:Q12737077.}
         }
          
@@ -168,7 +168,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?p ?label (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?s a wd:Q12737077;
             ?p ?o.
         OPTIONAL {?p rdfs:label ?label}    
@@ -189,7 +189,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?p ?label (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
         {?s a wd:Q12737077.
          ?s1 ?p ?s.
         OPTIONAL {?p rdfs:label ?label}    
@@ -229,7 +229,7 @@ WHERE
         ## Find the persons in the imported graph
         {SELECT ?item
         WHERE {
-            GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+            GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
                 {?item a wd:Q5.}
                 }
         OFFSET 10000        
