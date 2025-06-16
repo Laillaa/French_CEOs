@@ -159,26 +159,6 @@ WHERE
 ```
 
 ```sparql
-### Persons without a country of citizenship
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-
-SELECT ?item ?label
-WHERE 
-{GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/wikidata-imported-data.md>
-        
-    {?item a wd:Q5;
-        rdfs:label ?label.
-    MINUS {
-            ?item wdt:P27 ?country   .
-        }     
-    }
-}
-OFFSET 10000
-LIMIT 10
-```
-
-```sparql
 ### Persons with more than one citizenship
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
