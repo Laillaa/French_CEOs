@@ -36,46 +36,6 @@ WHERE {
 }
 ```
 
-### Inspect CEOs of interest
-
-```sparql
-## Count the total number of ceos
-SELECT (COUNT(*) as ?eff)
-WHERE {
-    ?item wdt:P31 wd:Q5;  # Any instance of a human.
-
-        wdt:P106 wd:Q484876  # Occupation: CEO
-
-    {?item wdt:P27 wd:Q142} # country of citizenship: France
-    UNION
-    {?item wdt:P27 wd:Q34} # country of citizenship: Sweden
-    UNION
-    {?item wdt:P27 wd:Q664} # country of citizenship: New Zealand
-}  
-#LIMIT 10
-
-```
-
-```sparql
-## Modern ceos: born from 1800 onward
-SELECT (count(*) as ?number)
-WHERE {
-    {?item wdt:P106 wd:Q484876}  # Occupation: CEO
-    
-    ?item wdt:P31 wd:Q5; # Any instance of a human.
-            wdt:P569 ?birthDate.
-    {?item wdt:P27 wd:Q142} # country of citizenship: France
-    UNION
-    {?item wdt:P27 wd:Q34} # country of citizenship: Sweden
-    UNION
-    {?item wdt:P27 wd:Q664} # country of citizenship: New Zealand
-    
-
-    BIND(REPLACE(str(?birthDate), "(.*)([0-9]{4})(.*)", "$2") AS ?year)
-    FILTER(xsd:integer(?year) > 1800 )
-}
-```
-
 ### Count how many properties are available for the considered population
 
 Execute this query on the Wikidata sparql-endpoint and save the result to a CSV document that you will store in your project: [population properties list](../Data/Query.csv)
@@ -99,14 +59,6 @@ WHERE {
 SELECT ?p  (count(*) as ?eff)
 WHERE {
     ?item wdt:P106 wd:Q484876.  # Occupation: CEO
-    
-    {?item wdt:P27 wd:Q142} # country of citizenship: France
-    UNION
-    {?item wdt:P27 wd:Q34} # country of citizenship: Sweden
-    UNION
-    {?item wdt:P27 wd:Q664} # country of citizenship: New Zealand
-
-
     ?item wdt:P31 wd:Q5; # Any instance of a human.
             wdt:P569 ?birthDate.
     ?item  ?p ?o.
