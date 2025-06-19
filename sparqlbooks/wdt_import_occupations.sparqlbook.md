@@ -222,9 +222,9 @@ WHERE
                 {?item a wd:Q5.}
         ORDER BY ?item      
         #OFFSET 0
-        #OFFSET 10000
+        OFFSET 10000
         #OFFSET 20000
-        OFFSET 30000
+        #OFFSET 30000
         LIMIT 10000
 
         }
