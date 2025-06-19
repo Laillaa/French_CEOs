@@ -1,0 +1,308 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Import fields of activity of persons\n\n\nIn this notebook we import fields of activity of our populations and try to find ways to aggregate them",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of persons \nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?s a wd:Q5.}\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT ?s ?label ?birthYear\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?s a wd:Q5;\n            rdfs:label ?label;\n            wdt:P569 ?birthYear}\n}\nORDER BY ?s\nLIMIT 3\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Fields",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Explore fields\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?item ?birthYear ?field ?fieldLabel \nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item ?birthYear\n        WHERE \n                {?item a wd:Q5;\n                    wdt:P569 ?birthYear}\n        ORDER BY ?item      \n        #OFFSET 10000\n        #OFFSET 20000\n        LIMIT 100\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P101 ?field.\n                BIND (?fieldLabel as ?fieldLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nORDER BY ?item ?field\nlimit 20\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Explore fields\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT (COUNT(*) as ?n)\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item ?birthYear\n        WHERE \n                {?item a wd:Q5}\n        ORDER BY ?item      \n        #OFFSET 10000\n        OFFSET 20000\n       LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P101 ?field .\n            }\n                \n        }\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Group and count\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?field ?fieldLabel (COUNT(*) as ?n)\nWHERE\n    {\n        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n       LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P101 ?field.\n                BIND (?fieldLabel as ?fieldLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nGROUP BY ?field ?fieldLabel\nORDER BY DESC(?n)\nLIMIT 20\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Group and count\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?field ?fieldLabel ?fieldClassLabel (COUNT(*) as ?n)\nWHERE\n    {\n        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n       LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # field\n                ?item wdt:P101 ?field.\n                # instance of\n                ?field wdt:P31 ?fieldClass.\n                BIND (?fieldLabel as ?fieldLabel)\n                BIND (?fieldClassLabel as ?fieldClassLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nGROUP BY ?field ?fieldLabel ?fieldClassLabel\nORDER BY DESC(?n)\nLIMIT 20\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Import data",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare the data to be imported\n# With LIMIT clause \n## Apparently labels are not repeated if already available\n# We therefore car integrate them directly in the INSERT below\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {?item wdt:P101 ?field.\n            ?field rdfs:label ?fieldLabel}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n        LIMIT 7\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P101 ?field.\n                BIND (?fieldLabel as ?fieldLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### This insert query has to be carried out directly on the Allegrograph server\n## Also, you have to carry it out in three steps. The accepted limit by Wikidata \n## of instances in a variable ('item' in our case) appears to be 10000.\n## You therefore have to have three steps for a population of around 23000 persons  \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nWITH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\nINSERT {?item wdt:P101 ?field.\n         ?field rdfs:label ?fieldLabel}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        #OFFSET 10000\n        #OFFSET 20000\n        OFFSET 30000\n        LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P101 ?field.\n                BIND (?fieldLabel as ?fieldLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the label of the property\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n  {wdt:P101 rdfs:label 'field'.}\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Add the field class\n\nThis is not properly speaking a class, but we use it here as such: wd:Q12737077",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "###  Inspect the fields:\n# number of different fields\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE\n   {\n   SELECT DISTINCT ?field\n   WHERE {\n      GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n         {\n            ?s wdt:P101 ?field.\n         }\n      }\n   }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the class 'field of work' for all the fields\n# Please note that strictly speaking Wikidata has no ontology,\n# therefore no classes. We add this for our convenience\n# Also, Wikidata 'fields' are not explicitly associated \n# with the Q627436 'Field of work' concept. We retain this concept\n# as more global than the parly overlapping Q1047113 'field of study'\n\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\nINSERT {\n   ?field rdf:type wd:Q627436.\n}\nWHERE\n   {\n   SELECT DISTINCT ?field\n   WHERE {\n         {\n            ?s wdt:P101 ?field.\n         }\n      }\n   }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Ajouter le label pour le concept field\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nINSERT DATA {\nGRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n    {    wd:Q627436 rdfs:label \"Field of Work\".\n    }    \n}\n\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Inspect the available information\n\nWith the queries [in this sparqlbook](wdt_available_information.sparqlbook) you can inspect the available information",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Basic query about persons' field\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?field ?fieldLabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?item wdt:P101 ?field.\n        OPTIONAL {?field rdfs:label ?fieldLabel}    \n          }\n}\nGROUP BY ?field ?fieldLabel \nORDER BY DESC(?n)\nLIMIT 10",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# La partie suivante est à reprendre",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Get the fields' parent fields ('classes')\n\n\nGiven the dispersion of fields observed in the [analysis notebook](../notebooks_jupyter/wikidata_exploration/wdt_fields_triplestore_exploration.ipynb), we try to obtain parent terms of fields to see if some groupings are possible.",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?item a wd:Q12737077.}\n        }\n         ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?field ?fieldLabel (COUNT(*) as ?n)\nWHERE\n    {\n        ## Find the fields in the imported graph\n        {SELECT DISTINCT ?item\n        WHERE \n            {?item a wd:Q12737077.}\n        ORDER BY ?item      \n        LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # subclass of\n                ?item wdt:P279 ?field.\n                BIND (?fieldLabel as ?fieldLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nGROUP BY ?field ?fieldLabel\nORDER BY DESC(?n)\nLIMIT 20\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Prepare import\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {\n    ?item  wdt:P279 ?field.\n    ?field rdfs:label ?fieldLabel.\n    # rdf:type field\n    ?field a wd:Q12737077.\n    }\nWHERE\n    {\n        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q12737077.}\n        ORDER BY ?item      \n        LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # subclass of\n                ?item wdt:P279 ?field.\n                BIND (?fieldLabel as ?fieldLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nORDER BY DESC(?item)\nLIMIT 5\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Insert parent fields\n\n**WARNING** : if you repeat this INSERT query more than once, each time you will add one more level in the hierarchy of fields.\n\nI repeated the INSERT *three times*, so I have three levels in my data.\n\nThe levels become the facto more then three because some higher level terms are used in the first and second levels, and then augmente with their parent and ancestors.\n\n**IMPORTANT** : execute the classification levels' queries below after each insert and observe what happens\n\nYou will be able to observe that there are multiple parallel classifications in Wikidata, and the fact that of using the same class and parenthood property adds more levels than expected!\n\nYou can then transverse these levels with property paths.",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the label of the property\n\n## This is needed just once\n\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n  {wdt:P279 rdfs:label 'subclass of'.}\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### INSERT\n\n## IMPORTANT : execute the classification levels' queries below \n# after each insert and observe what happens\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nWITH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\nINSERT {\n    ?item  wdt:P279 ?field.\n    ?field rdfs:label ?fieldLabel.\n    # rdf:type field\n    ?field a wd:Q12737077.\n    }\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q12737077.}\n        ORDER BY ?item      \n        LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # subclass of\n                ?item wdt:P279 ?field.\n                BIND (?fieldLabel as ?fieldLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\n\n\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Inspect imported data",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Propriétés des fields: outgoing\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?p ?label (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?s a wd:Q12737077;\n            ?p ?o.\n        OPTIONAL {?p rdfs:label ?label}    \n          }\n}\nGROUP BY ?p ?label\nORDER BY DESC(?n)",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### field classifications\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?birthYear ?o ?oLabel ?p ?o1 ?o1Label\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?item a wd:Q5;\n            wdt:P569 ?birthYear;\n            wdt:P106 ?o.\n        ?o a wd:Q12737077;\n            wdt:P279 ?o1.\n        OPTIONAL {?o rdfs:label ?oLabel}    \n        OPTIONAL {?o1 rdfs:label ?o1Label}    \n          }\n}\nORDER BY ?s\nLIMIT 10",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### First classification level",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### First classification level\n\n# filled after first insert\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?parentfield ?parentfieldlabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?s a wd:Q5.\n        \n        # ?s wdt:P106 ?field.\n        # ?field wdt:P279 ?parentfield\n        ## property path:\n        ?s  wdt:P106/wdt:P279  ?parentfield\n\n        OPTIONAL {?parentfield rdfs:label ?parentfieldlabel}    \n          }\n}\nGROUP BY ?parentfield ?parentfieldlabel \nORDER BY DESC(?n)\nLIMIT 20",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Second classification level",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Second classification level\n\n# no result after first insert\n# result after first insert\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?parentfield ?parentfieldlabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?s a wd:Q5.\n        \n        ## property path:\n        ?s  wdt:P106/wdt:P279/wdt:P279  ?parentfield\n\n        OPTIONAL {?parentfield rdfs:label ?parentfieldlabel}    \n          }\n}\nGROUP BY ?parentfield ?parentfieldlabel \nORDER BY DESC(?n)\nLIMIT 20",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Third classification level",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Third classification level\n\n# no result after first insert\n# result after first insert ! \n\n\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?parentfield ?parentfieldlabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?s a wd:Q5.\n        \n        ## property path:\n        ?s  wdt:P106/wdt:P279/wdt:P279/wdt:P279  ?parentfield\n\n        OPTIONAL {?parentfield rdfs:label ?parentfieldlabel}    \n          }\n}\nGROUP BY ?parentfield ?parentfieldlabel \nORDER BY DESC(?n)\nLIMIT 20",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Third classification level\n\n# explicit query path to check\n# that there are no recursions\n\n\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?parentfield ?parentfieldlabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?s a wd:Q5.\n        \n        ## property path:\n        ?s  wdt:P106 ?c1.\n        ?c1 wdt:P279 ?c2.\n        ?c2 wdt:P279 ?c3.\n        ?c3 wdt:P279  ?parentfield\n        ## Avoid recursivity\n        FILTER ( ?c2 != ?c1)\n        FILTER ( ?c3 not in (?c1, ?c2) )\n        FILTER (  ?parentfield not in (?c1, ?c2, ?c3) )\n\n        OPTIONAL {?parentfield rdfs:label ?parentfieldlabel}    \n          }\n}\nGROUP BY ?parentfield ?parentfieldlabel \nORDER BY DESC(?n)\nLIMIT 20",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Fourth classification level",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Fourth classification level\n\n# no result after first insert\n# result after first insert ! \n\n\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?parentfield ?parentfieldlabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {?s a wd:Q5.\n        \n        ## property path:\n        ?s  wdt:P106 ?c1.\n        ?c1 wdt:P279 ?c2.\n        ?c2 wdt:P279 ?c3.\n        ?c3 wdt:P279 ?c4.\n        ?c4 wdt:P279  ?parentfield\n        FILTER ( ?c2 != ?c1)\n        FILTER ( ?c3 not in (?c1, ?c2) )\n        FILTER ( ?c4 not in (?c1, ?c2, ?c3) )\n        FILTER (  ?parentfield not in (?c1, ?c2, ?c3, ?c4) )\n\n        OPTIONAL {?parentfield rdfs:label ?parentfieldlabel}    \n          }\n}\nGROUP BY ?parentfield ?parentfieldlabel \nORDER BY DESC(?n)\nLIMIT 20",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Test: get rid of the classifications and restart\n\n**Beware**, the created parent and ancestor fields will also be deleted\n\n**Beware**, do not execute theses queries after you added *instance of* 'classes' to the fields ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### First classification level\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?s ?o ?oClass\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {\n            ## retrieves all the classifications:\n            ?s wdt:P279 ?o.\n            ?o a ?oClass\n          }\n}\nLIMIT 20",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Delete all classifications, any level\n\n## Execute directly in Allegrograph\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nWITH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n# Protection #  DELETE {?s  wdt:P279 ?o .\n    ?o rdfs:label ?fieldLabel.\n    # rdf:type field\n    ?o a wd:Q12737077.}\nWHERE {\n        {\n            ## retrieves all the classifications:\n            ?s wdt:P279 ?o.\n          }\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Inspect the *instance of* metaclasses to fields\n\n**CAUTION** : add these classifications ONLY after you are finished with your two (or more) inserts of fields as parents of other fields",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## \n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?field ?fieldLabel ?metaclass ?metaclassLabel ?n\nWHERE\n    {\n        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        ## Find the persons in the imported graph\n        {SELECT ?field ?fieldLabel (COUNT(*) as ?n)\n        WHERE \n                {?item a wd:Q5.\n                ?item wdt:P106 ?field.\n                ?field rdfs:label ?fieldLabel}\n        GROUP BY ?field ?fieldLabel      \n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # instance of\n                ?field wdt:P31 ?metaclass.\n                BIND (?metaclassLabel as ?metaclassLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nORDER BY DESC(?n)\nLIMIT 30\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "**CONCLUSION**\n\nWe observe that this kind of classification does not allow to separate scientific and other fields.\n\nWe do not therefore move further in this direction",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Inspect parent fields fields\n\nThe aim is to find a way to distinguish between fields",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Find fields and parent fields of parent fields\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?field ?fieldLabel\n          ?parentfield ?parentfieldlabel \n          ?fieldField ?fieldFieldLabel\n          ?knowledgeClassification ?knowledgeClassificationLabel\n          ?parentKnowledgeClassification ?parentKnowledgeClassificationLabel\n          (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {SELECT ?field ?fieldLabel\n          ?parentfield ?parentfieldlabel \n          ?parentKnowledgeClassification ?parentKnowledgeClassificationLabel\n        \n        WHERE\n        {?s a wd:Q5.\n        \n        ?s  wdt:P106 ?field.\n        ?field  wdt:P279  ?parentfield.\n        ?field rdfs:label ?fieldLabel.\n        ?parentfield rdfs:label ?parentfieldlabel    \n        }\n        LIMIT 3000\n        }\n\n        SERVICE <https://query.wikidata.org/sparql>\n          {\n              # field of this field\n              ?parentfield wdt:P425 ?fieldField.\n              # instance of\n              ?fieldField wdt:P31 ?knowledgeClassification.\n              # subclass of\n              ?knowledgeClassification wdt:P279 ?parentKnowledgeClassification.\n\n\n              BIND (?fieldFieldLabel as ?fieldFieldLabel)\n              BIND (?knowledgeClassificationLabel as ?knowledgeClassificationLabel)\n              BIND (?parentKnowledgeClassificationLabel as ?parentKnowledgeClassificationLabel)\n              SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n          }\n\n}\nGROUP BY ?field ?fieldLabel\n          ?parentfield ?parentfieldlabel \n          ?fieldField ?fieldFieldLabel\n          ?knowledgeClassification ?knowledgeClassificationLabel\n          ?parentKnowledgeClassification ?parentKnowledgeClassificationLabel\nORDER BY DESC(?n)\nLIMIT 20",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Simplified query\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT DISTINCT \n?field ?fieldLabel ?parentField ?parentFieldLabel\n?n\n          #?parentKnowledgeClassification ?parentKnowledgeClassificationLabel \n          # (SUM(?n) as ?sn)\nWHERE {\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n        {\n          SELECT ?field ?fieldLabel\n          ?parentfield (COUNT(*) as ?n)\n        \n        WHERE\n        {\n          ?s a wd:Q5;  \n              wdt:P106 ?field.\n          ?field rdfs:label ?fieldLabel.\n          ?field  wdt:P279  ?parentfield.\n          }  \n        GROUP BY ?field ?fieldLabel\n          ?parentfield\n        }\n\n        SERVICE <https://query.wikidata.org/sparql>\n          {\n              # field of parent field / instance of /  subclass of  \n              ?parentfield wdt:P425 / wdt:P31 ?parentField.\n              # ?parentField wdt:P279 ?parentKnowledgeClassification.\n\n\n              #BIND (?field as ?fieldLabel)\n              BIND (?parentFieldLabel as ?parentFieldLabel)\n              # BIND (?parentKnowledgeClassificationLabel as ?parentKnowledgeClassificationLabel)\n              SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n          }\n\n}\n# GROUP BY ?field ?fieldLabel ?parentField ?parentFieldLabel\n          # ?parentKnowledgeClassification ?parentKnowledgeClassificationLabel \nORDER BY DESC(?n)\nLIMIT 30",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## A faire\n\n* ajouter les 'metaclasses'\n* ajouter les classes de metaclasses: metaclass, second-order class\n* vérifier l'association de fields à metaclasses\n* vérifier si les metaclasses permettent de classer\n* vérifier si toute personne a des fields dans les principales metaclasses\n* préparer des requêtes pour l'analyse",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Create pairs of fields \n# and add the birth year of the person\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?item ?birthYear ?field ?fieldLabel ?field_1 ?field_1Label\nWHERE\n    {\n        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\n\n        ## Find the persons in the imported graph\n        {SELECT ?item ?birthYear\n        WHERE \n                {?item a wd:Q5;\n                    wdt:P569 ?birthYear}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n       LIMIT 5\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P106 ?field.\n                ?item wdt:P106 ?field_1.\n                FILTER (str(?fieldLabel) < str(?field_1Label))\n                BIND (?fieldLabel as ?fieldLabel)\n                BIND (?field_1Label as ?field_1Label)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\n\n",
+    "metadata": {}
+  }
+]
