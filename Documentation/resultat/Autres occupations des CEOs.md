@@ -1,7 +1,7 @@
 # Autres positions possibles de la population
 
 
-## Occupation principale
+## Occupation principales
 
 A l'aide d'un barplot regroupant le nombre de PDG par pays (en excluant les PDG ayant plusieurs nationalité car ils représentaint une minorité), nous avons pus avoir une idée des pays et des effectifs de PDG qui en sortent.
 
