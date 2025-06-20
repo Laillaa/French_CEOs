@@ -16,7 +16,7 @@ L'objectif de cette recherche est d'avoir une idée sur les caractéristiques qu
 
 * Formation
 * Autres occupations successives
-* Langues parlées ou écrites, pluri-nationalié...
+* Nationalié
 * Activités en dehors de l'activité professionnelle
 * Appartenance à des institutions (académies, etc.)
 * Correspondances et réseaux
