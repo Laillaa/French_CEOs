@@ -1,0 +1,20 @@
+# Autres positions possibles de la population
+
+
+## Occupation principale
+
+A l'aide d'un barplot regroupant le nombre de PDG par pays (en excluant les PDG ayant plusieurs nationalité car ils représentaint une minorité), nous avons pus avoir une idée des pays et des effectifs de PDG qui en sortent.
+
+![Occupation principale](../../notebooks_jupyter/wikidata_exploration/images/Top_10_Main_Occupations.png "Occupation principale")
+
+On observe un nette prépondérance des naissances en Israel et les USA, et dans la plupart des pays de l'Europe du Nord et de l'Ouest.
+
+
+## Distribution dans le temps
+
+Grâce à une analyse des naissances par continent d'origine en relation avec les 'générations' (périodes de 25 ans) nous observons l'évolution dans le temps
+
+![Distribution par génération et région (Barplot)](../../notebooks_jupyter/wikidata_exploration/images/Distribution_des_naissances_par_génération_et_continent.png "Distribution par génération et région (Barplot)")
+
+* On remarque immédiatement la présence de l'Europe, surtout durant les années 1951-1975.
+* Même si Israel et les USA sont en tête en matière du nombre de PDG, cela ne signifie pas que leurs continents respectifs auront le taux de natalité le plus élevé.
