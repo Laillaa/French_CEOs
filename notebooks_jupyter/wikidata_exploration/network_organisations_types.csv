@@ -1,0 +1,406 @@
+,organisation,effectif
+0,university,717
+1,organization,558
+2,open-access publisher,527
+3,private not-for-profit educational institution,473
+4,public university,418
+5,private university,385
+6,public research university,380
+7,business school,346
+8,research university,313
+9,public educational institution of the united states,247
+10,grande école,246
+11,alumni association,190
+12,high school,174
+13,academic publisher,166
+14,educational organization,164
+15,higher education institution,145
+16,colonial colleges,135
+17,publishing company,122
+18,land-grant university,112
+19,school,91
+20,institute of technology,86
+21,geographic location,81
+22,nonprofit organization,71
+23,educational institution,70
+24,secondary school,69
+25,ottoman association,68
+26,boarding school,63
+27,university in france,61
+28,public school,53
+29,college,53
+30,independent school,52
+31,faculty,49
+32,law school,48
+33,engineering college,42
+34,production company,42
+35,catholic university,34
+36,learned society,34
+37,academic institution,33
+38,collegiate university,33
+39,graduate school,32
+40,comprehensive university,31
+41,liberal arts college,30
+42,swedish government agency,30
+43,educational facility,29
+44,grand établissement,28
+45,research institute,27
+46,university building,25
+47,private school,24
+48,university in quebec,23
+49,university campus,22
+50,national academy,22
+51,academy of sciences,21
+52,higher education institution directly under ministry of education of the people’s republic of china,21
+53,national research university,20
+54,boys' school,20
+55,building,20
+56,space grant institution,20
+57,university in ontario,20
+58,college of the university of cambridge,19
+59,sun grant institution,18
+60,business,18
+61,school building,18
+62,charitable organization,17
+63,gymnasium,17
+64,university of excellence,16
+65,lycée,16
+66,military academy,15
+67,exempt charity,15
+68,autonomous university,14
+69,national university,14
+70,united nations depository library,14
+71,university-preparatory school,13
+72,vice-ministerial level university,13
+73,academy school,13
+74,non-governmental organization,13
+75,local internet registry,12
+76,enterprise,12
+77,college of the university of oxford,12
+78,liberal arts college in the united states,12
+79,university in british columbia,11
+80,academic department,11
+81,grammar school,11
+82,historically black college or university,11
+83,pontifical university,10
+84,institute,10
+85,primary school,10
+86,sea grant institution,10
+87,swedish royal academies,10
+88,occupation,10
+89,public company,10
+90,girls' school,9
+91,colleges that change lives,9
+92,501(c)(3) organization,9
+93,public policy school,9
+94,church college,8
+95,drama school,8
+96,university college,8
+97,workplace,8
+98,military school,7
+99,jesuit university,7
+100,international organization,7
+101,czech research institution,7
+102,musical group,7
+103,trade association,7
+104,regulatory college,7
+105,think tank,7
+106,group of structures or buildings,7
+107,professional association,7
+108,école d'application,6
+109,women's college,6
+110,state public university,6
+111,campus university,6
+112,profession,6
+113,catholic school,6
+114,state university system,6
+115,former educational institution,6
+116,ancient university,6
+117,military unit,6
+118,united states senior military college,5
+119,legal concept,5
+120,medical school,5
+121,conservatory,5
+122,public–private partnership,5
+123,private educational institution,5
+124,art academy,5
+125,university of applied sciences,5
+126,academy,5
+127,residential college,5
+128,seminary,5
+129,corporate title,5
+130,central university,4
+131,political party,4
+132,vocational school,4
+133,government body of australia,4
+134,international sport governing body,4
+135,building complex,4
+136,urban university,4
+137,faculty of law,4
+138,red brick university,4
+139,staff college,4
+140,collection,4
+141,community college,4
+142,former entity,4
+143,deemed university,4
+144,day school,4
+145,company,4
+146,community school,4
+147,polytechnic,4
+148,census-designated place in the united states,3
+149,state-integrated school,3
+150,school of the french public service,3
+151,academic discipline,3
+152,école normale supérieure,3
+153,standards organization,3
+154,cité scolaire,3
+155,comprehensive academic and research university,3
+156,corporation,3
+157,constituent college,3
+158,council,3
+159,direct reporting unit,3
+160,defunct organization,3
+161,congressional caucus,3
+162,private for-profit educational institution,3
+163,musical duo,3
+164,mixed-sex education,3
+165,open university,3
+166,first school,3
+167,engineering society,3
+168,fraternity,3
+169,journalism school,3
+170,further education college,3
+171,university system,3
+172,verwaltungshochschule,3
+173,hospital,3
+174,architectural landmark,3
+175,association,3
+176,architectural structure,3
+177,arboretum,3
+178,advocacy group,3
+179,aefe managed schools,2
+180,agricultural school,2
+181,upper secondary school in finland,2
+182,agricultural college,2
+183,architectural heritage monument,2
+184,ancient university of scotland,2
+185,bilingual school,2
+186,boys' high school,2
+187,venture capital firm,2
+188,branch of engineering,2
+189,higher secondary school,2
+190,urban school,2
+191,legislative term,2
+192,media company,2
+193,institutes of technology in the republic of ireland,2
+194,jesuit school,2
+195,museum,2
+196,government agency,2
+197,medical device company,2
+198,medium size publisher,2
+199,membership organization,2
+200,men's college,2
+201,french school abroad,2
+202,military museum,2
+203,gymnasieskola,2
+204,mass media,2
+205,junior college,2
+206,labor union,2
+207,independent agency of the united states government,2
+208,hosting foundation,2
+209,neighborhood,2
+210,online newspaper,2
+211,national higher engineering school,2
+212,music school,2
+213,rugby league team,2
+214,school of education,2
+215,research i university,2
+216,public educational institution,2
+217,christian school,2
+218,sports club,2
+219,zionist youth movement,2
+220,cegep,2
+221,trade union federation,2
+222,unicameral legislature,2
+223,yeshiva,2
+224,technische hochschule,2
+225,startup accelerator,2
+226,college in france,2
+227,space agency,2
+228,academic major,2
+229,foundation,2
+230,educational program,2
+231,federal university,2
+232,film school,2
+233,cultural property,2
+234,country,2
+235,copyright collective,2
+236,communications media,2
+237,wikimedia disambiguation page,1
+238,website,1
+239,voluntary association,1
+240,vocational university,1
+241,hotel,1
+242,human rights organization,1
+243,honor society,1
+244,hispanic-serving institution,1
+245,massive online open course provider,1
+246,lycée-collège,1
+247,lower primary school,1
+248,lyceum,1
+249,video game publisher,1
+250,vocational school in indonesia,1
+251,venue,1
+252,upper secondary school in norway,1
+253,university of applied sciences (switzerland),1
+254,university in manitoba,1
+255,upper house,1
+256,aided school,1
+257,association football federation,1
+258,arts venue,1
+259,banda group,1
+260,boy band,1
+261,affiliated school,1
+262,agency of the european union,1
+263,islamic university,1
+264,japanese combined junior and senior high school,1
+265,institut d'études politiques,1
+266,junior college in japan,1
+267,kurultai,1
+268,international non-governmental organization,1
+269,japanese high school,1
+270,institut d'administration des entreprises,1
+271,institute of science and technology,1
+272,idf military unit,1
+273,amusement park,1
+274,air force academy,1
+275,act of the parliament of india,1
+276,aids organization,1
+277,movie theater,1
+278,ministry-owned university,1
+279,higher conservatory of music,1
+280,higher attestation commission,1
+281,gymnasium (bavaria),1
+282,gymnasium in germany,1
+283,group of universities and institutions (france),1
+284,groupement d'intérêt économique,1
+285,grand lodge,1
+286,government commission,1
+287,group of humans,1
+288,group,1
+289,governing body,1
+290,general education school,1
+291,german student corps,1
+292,gifted education,1
+293,men's organization,1
+294,meeting,1
+295,middle school,1
+296,gang,1
+297,french national sports federation,1
+298,military university,1
+299,military education and training,1
+300,jewish seminary,1
+301,legal person,1
+302,landsmannschaft,1
+303,library,1
+304,local government area of nigeria,1
+305,performing rights organization,1
+306,national sports governing body,1
+307,national trade union center,1
+308,national olympic committee,1
+309,forestry science education,1
+310,for-profit education,1
+311,folkeskole,1
+312,flight school,1
+313,exchange program,1
+314,facility,1
+315,fraternal organization,1
+316,former hospital,1
+317,private career college in alberta,1
+318,private educational institution in catalonia,1
+319,privately held company,1
+320,private hochschule,1
+321,politburo,1
+322,political organization,1
+323,pressure group,1
+324,pharmacy school,1
+325,committee,1
+326,parliament,1
+327,paramilitary organization,1
+328,education company,1
+329,escuela técnica superior,1
+330,ethnic group,1
+331,education program,1
+332,educational stage,1
+333,event sequence,1
+334,ethnic minority group,1
+335,nonprofit corporation,1
+336,non-departmental public body,1
+337,officer candidate school,1
+338,national school,1
+339,music academy,1
+340,musical ensemble,1
+341,rap group,1
+342,ranked list,1
+343,duo,1
+344,dining club,1
+345,destroyed building or structure,1
+346,design school,1
+347,cultural institution,1
+348,cultural heritage ensemble,1
+349,conservatories with regional coverage,1
+350,cpsu body,1
+351,constitutional monarchy,1
+352,continuing education,1
+353,professional society,1
+354,q129341528,1
+355,q190328,1
+356,regroupement de composantes,1
+357,service club,1
+358,selective school,1
+359,single-sex school,1
+360,set,1
+361,certificate authority,1
+362,chamber of commerce and industry,1
+363,religious denomination,1
+364,recurring event,1
+365,school of international relations,1
+366,school of public health,1
+367,science project,1
+368,science secondary school,1
+369,scientific journal,1
+370,sekolah menengah atas,1
+371,registration authority,1
+372,rugby union club,1
+373,collective negotiation community,1
+374,coeducational school,1
+375,coalition,1
+376,club,1
+377,cinema chain,1
+378,christian mission,1
+379,children's hospital,1
+380,charter high school,1
+381,social group,1
+382,chamber of deputies,1
+383,state private university,1
+384,sovereign state,1
+385,sports hall of fame,1
+386,songwriting team,1
+387,sorority,1
+388,combined school,1
+389,teaching hospital,1
+390,studentenverbindung,1
+391,student society,1
+392,student debating society,1
+393,sports museum,1
+394,type of educational institution,1
+395,theatre company,1
+396,terrorist organization,1
+397,women's organization,1
+398,women's college in the united states,1
+399,unified command,1
+400,women's rights organization,1
+401,yeshiva high school,1
+402,academic degree,1
+403,école nationale supérieure,1
+404,academic archive,1
