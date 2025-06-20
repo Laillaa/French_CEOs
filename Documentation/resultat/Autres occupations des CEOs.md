@@ -1,20 +1,12 @@
 # Autres positions possibles de la population
 
 
-## Occupation principales
+## Occupation(s) principale(s)
 
-A l'aide d'un barplot regroupant le nombre de PDG par pays (en excluant les PDG ayant plusieurs nationalité car ils représentaint une minorité), nous avons pus avoir une idée des pays et des effectifs de PDG qui en sortent.
+A l'aide d'un barplot regroupant les principales occupation de notre populations, nous avons obtenu un aperçu de l'activité principale de nos CEOs.
 
 ![Occupation principale](../../notebooks_jupyter/wikidata_exploration/images/Top_10_Main_Occupations.png "Occupation principale")
 
-On observe un nette prépondérance des naissances en Israel et les USA, et dans la plupart des pays de l'Europe du Nord et de l'Ouest.
+On observe, à notre surprise, que le poste de CEO, même s'il posside l'effectif le plus grand, n'est pas l'occupation principale de tous nos PDG.
 
-
-## Distribution dans le temps
-
-Grâce à une analyse des naissances par continent d'origine en relation avec les 'générations' (périodes de 25 ans) nous observons l'évolution dans le temps
-
-![Distribution par génération et région (Barplot)](../../notebooks_jupyter/wikidata_exploration/images/Distribution_des_naissances_par_génération_et_continent.png "Distribution par génération et région (Barplot)")
-
-* On remarque immédiatement la présence de l'Europe, surtout durant les années 1951-1975.
-* Même si Israel et les USA sont en tête en matière du nombre de PDG, cela ne signifie pas que leurs continents respectifs auront le taux de natalité le plus élevé.
+On remarque aussi que les 3 occupations suivantes se situent dans le domaine de la gestion et du business. Ce que nous pouvons en tirer, c'est que ces domaines facilitent l'acces à ce type de poste.
