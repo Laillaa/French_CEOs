@@ -12,5 +12,20 @@ Ce projet vise à étudier l'évolution des doctrines et méthodes en entreprena
 
 
 * [Problématique et questionnement](Problematique-Questionnement.md) 
-* [Listes des CEOs](Listes_ceos.md)
+* [Listes des CEOs](Liste_ceos.md)
 * [Catalogue des informations](Catalogue-des-informations.md)
+
+    
+
+### Analyse des données de Wikidata (notebooks Python)
+* [Distribution des naissances dans le temps](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_distribution_naissances.ipynb)
+* [Nationalités: production et codage des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_nationalite_production.ipynb)
+* [Nationalités: analyse des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_nationalite_analyse.ipynb)
+* [Genres: analyse des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_genre_analyse.ipynb)
+* [Occupations: production et codage des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_occupations_production.ipynb)
+* [Occupations: analyse des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_occupations_analyse.ipynb)
+ 
+
+### Résultats
+
+* [Analyse de la distribution dans le temps et l'espace des naissances](results/birth_places_spatiotemporal_distribution.md)
