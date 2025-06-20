@@ -1,0 +1,56 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Import additional data about organisations\n\n\nIf we add new organisations we should update the available additional information",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of persons in our population\r\nPREFIX wd: <http://www.wikidata.org/entity/>\r\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\r\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\r\n\r\n\r\nSELECT (COUNT(*) as ?n)\r\nWHERE {\r\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\r\n        {?s a crm:E74_Group}\r\n}\r\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Properties of organisations\r\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\r\nPREFIX wd: <http://www.wikidata.org/entity/>\r\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\r\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\r\n\r\nSELECT ?p ?label (COUNT(*) as ?n)\r\nWHERE {\r\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\r\n        {?s a crm:E74_Group;\r\n            ?p ?o.\r\n        OPTIONAL {?p rdfs:label ?label}    \r\n          }\r\n}\r\nGROUP BY ?p ?label\r\nORDER BY DESC(?n)",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of locations of organisations\r\nPREFIX wd: <http://www.wikidata.org/entity/>\r\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\r\nPREFIX wikibase: <http://wikiba.se/ontology#>\r\nPREFIX bd: <http://www.bigdata.com/rdf#>\r\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\r\n\r\nSELECT (COUNT(*) as ?n)\r\nWHERE {\r\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\r\n        {SELECT ?item\r\n        WHERE \r\n                {?item a crm:E74_Group.}\r\n        #ORDER BY ?item      \r\n        #OFFSET 10000\r\n        LIMIT 10000\r\n\r\n        }\r\n\r\n         SERVICE <https://query.wikidata.org/sparql>\r\n            {\r\n                ### coordinate location\r\n                ?item wdt:P625 ?location.\r\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \r\n            }\r\n}\r\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Inspect locations of organisations\r\nPREFIX wd: <http://www.wikidata.org/entity/>\r\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\r\nPREFIX wikibase: <http://wikiba.se/ontology#>\r\nPREFIX bd: <http://www.bigdata.com/rdf#>\r\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\r\n\r\nSELECT ?item ?itemLabel ?location\r\nWHERE {\r\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\r\n        {SELECT ?item ?itemLabel\r\n        WHERE \r\n                {?item a crm:E74_Group;\r\n                        rdfs:label ?itemLabel.}\r\n        #ORDER BY ?item      \r\n        #OFFSET 10000\r\n        LIMIT 20\r\n\r\n        }\r\n\r\n         SERVICE <https://query.wikidata.org/sparql>\r\n            {\r\n                ### coordinate location\r\n                ?item wdt:P625 ?location.\r\n                #BIND (?citizenshipLabel as ?citizenshipLabel)\r\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \r\n            }\r\n}\r\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare and inspect the data to be imported\r\n\r\nPREFIX wd: <http://www.wikidata.org/entity/>\r\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\r\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\nPREFIX wikibase: <http://wikiba.se/ontology#>\r\nPREFIX bd: <http://www.bigdata.com/rdf#>\r\nPREFIX sdh: <https://sdhss.org/ontology/core/>\r\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>  \r\n\r\nCONSTRUCT {?item wdt:P625 ?location.}\r\nWHERE\r\n    {\r\n        GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\r\n\r\n        ## Find the persons in the imported graph\r\n        {SELECT ?item\r\n        WHERE \r\n                {?item a crm:E74_Group.}\r\n        ORDER BY ?item      \r\n        OFFSET 0\r\n        #OFFSET 10000\r\n        LIMIT 10\r\n\r\n        }\r\n        ## \r\n        SERVICE <https://query.wikidata.org/sparql>\r\n            {\r\n                ### coordinate location\r\n                ?item wdt:P625 ?location.\r\n            }\r\n                \r\n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert coordinate locations\r\n\r\nPREFIX wd: <http://www.wikidata.org/entity/>\r\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\r\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\nPREFIX wikibase: <http://wikiba.se/ontology#>\r\nPREFIX bd: <http://www.bigdata.com/rdf#>\r\nPREFIX sdh: <https://sdhss.org/ontology/core/>\r\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\r\n\r\n\r\nWITH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\r\nINSERT {### coordinate location\r\n        ?item wdt:P625 ?location.}\r\nWHERE\r\n    {\r\n        ## Find the persons in the imported graph\r\n        {SELECT ?item\r\n        WHERE \r\n                {?item a crm:E74_Group.}\r\n        ORDER BY ?item      \r\n        LIMIT 10000\r\n\r\n        }\r\n        ## \r\n        SERVICE <https://query.wikidata.org/sparql>\r\n            {\r\n                ### coordinate location\r\n                ?item wdt:P625 ?location. \r\n            }\r\n                \r\n        }\r\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Prepare data export",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of persons in our population\r\nPREFIX wd: <http://www.wikidata.org/entity/>\r\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\r\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\r\n\r\n\r\nSELECT (COUNT(*) as ?n)\r\nWHERE {\r\n    GRAPH <https://github.com/Laillaa/French_CEOs/blob/main/graphs/Wikidata-imported-data.md>\r\n        {?s a wd:Q6256}\r\n}\r\n",
+    "metadata": {}
+  }
+]
