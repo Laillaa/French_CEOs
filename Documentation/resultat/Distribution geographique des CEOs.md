@@ -3,7 +3,7 @@
 
 ## Effectifs par lieu de naissance
 
-A l'aide d'un barplot regroupant le nombre de PDG par pays (en excluant les PDG ayant plusieurs nationalité car ils représentaint une minorité), nous avons pus avoir une idée des pays et des effectifs de PDG qui en sortent.
+A l'aide d'un barplot regroupant le nombre de PDG par pays (en excluant les PDG ayant plusieurs nationalité car ils représentaient une minorité), nous avons pu avoir une idée des pays et des effectifs de PDG qui en sortent.
 
 ![Effectifs par lieu de naissance](../../notebooks_jupyter/wikidata_exploration/images/Effectifs_par_lieu_de_naissance.png "Effectifs par lieu de naissance")
 
