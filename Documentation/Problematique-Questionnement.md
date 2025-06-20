@@ -6,10 +6,11 @@ L'objectif de cette recherche est d'avoir une idée sur les caractéristiques qu
 
 ## Questions de recherche
 
-* Existe-t-il une relation entre les disciplines de formation des CEO et leur position actuelle dans la direction d’entreprise ?
 * Quels métiers ou expériences successives (consulting, finance, entrepreneuriat, etc.) sont les plus représentés ?
 * Quelle est la distribution geographique des CEOs? Y a-t-il un(des) pays plus représenté(s) que d'autre(s)?
-* Dans quelle mesure les réseaux de correspondance et d'influence ainsi que l'appartenance à certains cercles structurent-ils et favorisent-ils l'accès aux postes de direction? 
+* Dans quelle mesure les réseaux de correspondance et d'influence ainsi que l'appartenance à certains cercles structurent-ils et favorisent-ils l'accès aux postes de direction?
+
+* Existe-t-il une relation entre les disciplines de formation des CEO et leur position actuelle dans la direction d’entreprise ?
 * Les activités extra-professionnelles (philanthropie, engagement politique, sport, etc.) ont-elles un impact sur la trajectoire et la reconnaissance des CEOs?
 
 ## Aspects de l'information à collecter
