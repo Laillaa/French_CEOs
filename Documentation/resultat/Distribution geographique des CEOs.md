@@ -3,27 +3,18 @@
 
 ## Effectifs par lieu de naissance
 
-![Effectifs par lieu de naissance](../../notebooks_jupyter/wikidata_exploration/images/Effectifs par lieu de naissance.png "Effectifs par lieu de naissance")
+A l'aide d'un barplot regroupant le nombre de PDG par pays (en excluant les PDG ayant plusieurs nationalité car ils représentaint une minorité), nous avons pus avoir une idée des pays et des effectifs de PDG qui en sortent.
 
-On observe un nette prépondérance des naissances en Europe et, dans une moindre mesure, aux Etats Unis.
+![Effectifs par lieu de naissance](../../notebooks_jupyter/wikidata_exploration/images/Effectifs_par_lieu_de_naissance.png "Effectifs par lieu de naissance")
 
-
-## Carte choroplète
-
-
-A l'aide d'une [carte choroplète](https://fr.wikipedia.org/wiki/Carte_choropl%C3%A8the) nous précisons notre analyse
-
-![Distribution des naissances par région](../../notebooks_jupyter/wikidata_exploration/images/birth_places_geopandas_choropleth.png "Distribution des naissance par région")
-
-De cette carte apparaît également la place important de la Russie dans ce domaine scientifique
+On observe un nette prépondérance des naissances en Israel et les USA, et dans la plupart des pays de l'Europe du Nord et de l'Ouest.
 
 
 ## Distribution dans le temps
 
-Grâce à une analyse bivariée des régions d'origine en relation avec les 'générations' (périodes de 30 ans) nous observons l'évolution dans le temps
+Grâce à une analyse des naissances par continent d'origine en relation avec les 'générations' (périodes de 25 ans) nous observons l'évolution dans le temps
 
-![Distribution par génération et région](../../notebooks_jupyter/wikidata_exploration/images/birth_regions_periods_bivariate.png "Distribution par génération et région")
+![Distribution par génération et région (Barplot)](../../notebooks_jupyter/wikidata_exploration/images/Distribution_des_naissances_par_génération_et_continent.png "Distribution par génération et région (Barplot)")
 
-* Apparaît de cette carte une forte prépondérance de l'Europe dans la première partie de la période observée.
-* La Russie est quant à elle particulièrement présente dans les générations de 1881 à 1940.
-* A noter le décollage de l'Asie après la Deuxième Guerre Mondiale ainsi que cleui de l'Europe méridionale et Amérique du Sud dans la dernière génération.
+* On remarque immédiatement la présence de l'Europe, surtout durant les années 1951-1975.
+* Même si Israel et les USA sont en tête en matière du nombre de PDG, cela ne signifie pas que leurs continents respectifs auront le taux de natalité le plus élevé.
