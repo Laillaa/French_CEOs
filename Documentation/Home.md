@@ -21,7 +21,6 @@ Ce projet vise à étudier l'évolution des doctrines et méthodes en entreprena
 * [Distribution des naissances dans le temps](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_distribution_naissances_triplestore.ipynb)
 * [Nationalités: production et codage des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_nationalite_production.ipynb)
 * [Nationalités: analyse des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_nationalite_analyse.ipynb)
-* [Genres: analyse des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_genre_analyse.ipynb)
 * [Occupations: production et codage des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_occupations_production.ipynb)
 * [Occupations: analyse des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_occupations_analyse.ipynb)
  
