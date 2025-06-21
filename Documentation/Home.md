@@ -18,13 +18,15 @@ Ce projet vise à étudier l'évolution des doctrines et méthodes en entreprena
     
 
 ### Analyse des données de Wikidata (notebooks Python)
-* [Distribution des naissances dans le temps](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_distribution_naissances_triplestore.ipynb)
-* [Nationalités: production et codage des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_nationalite_production.ipynb)
-* [Nationalités: analyse des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_nationalite_analyse.ipynb)
-* [Occupations: production et codage des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_occupations_production.ipynb)
-* [Occupations: analyse des données](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_occupations_analyse.ipynb)
+* [Distribution des naissances dans le temps](https://com/Laillaa/French_CEOs/blob/main/github.notebooks_jupyter/wikidata_exploration/wdt_distribution_naissances_triplestore.ipynb)
+* [Nationalités](https://com/Laillaa/French_CEOs/blob/main/github.notebooks_jupyter/wikidata_exploration/wdt_bivariee_generations_continents_triplestore.ipynb)
+* [Occupations](https://com/Laillaa/French_CEOs/blob/main/github.notebooks_jupyter/wikidata_exploration/wdt_occupations_triplestore_exploration.ipynb)
+* [Occupations (vers la fin)](https://com/Laillaa/French_CEOs/blob/main/github.notebooks_jupyter/wikidata_exploration/wdt_bivariee_generations_continents_triplestore.ipynb)
+* [Networks of organisations](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_organisations_networks.ipynb)
  
 
 ### Résultats
 
-* [Analyse de la distribution dans le temps et l'espace des naissances](results/birth_places_spatiotemporal_distribution.md)
+* [1. Distribution geographique des CEOs.md](Documentation/resultat/1.Distribution_geographique_des_CEOs.md)
+* [2. Autres occupations des CEOs.md](Documentation/resultat/2.Autres_occupations_des_CEOs.md)
+* [3. Les réseaux de correspondance](Documentation/resultat/3.Les_réseaux_de_correspondance.md)
