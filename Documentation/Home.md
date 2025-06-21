@@ -27,6 +27,6 @@ Ce projet vise à étudier l'évolution des doctrines et méthodes en entreprena
 
 ### Résultats
 
-* [1. Distribution geographique des CEOs.md](Documentation/resultat/1.Distribution_geographique_des_CEOs.md)
-* [2. Autres occupations des CEOs.md](Documentation/resultat/2.Autres_occupations_des_CEOs.md)
-* [3. Les réseaux de correspondance](Documentation/resultat/3.Les_réseaux_de_correspondance.md)
+* [1. Distribution geographique des CEOs.md](resultat/1.Distribution_geographique_des_CEOs.md)
+* [2. Autres occupations des CEOs.md](resultat/2.Autres_occupations_des_CEOs.md)
+* [3. Les réseaux de correspondance](resultat/3.Les_réseaux_de_correspondance.md)
