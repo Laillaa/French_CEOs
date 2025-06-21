@@ -6,8 +6,8 @@ L'objectif de cette recherche est d'avoir une idée sur les caractéristiques qu
 
 ## Questions de recherche
 
-* Quels métiers ou expériences successives (consulting, finance, entrepreneuriat, etc.) sont les plus représentés ?
 * Quelle est la distribution geographique des CEOs? Y a-t-il un(des) pays plus représenté(s) que d'autre(s)?
+* Quels métiers ou expériences successives (consulting, finance, entrepreneuriat, etc.) sont les plus représentés ?
 * Dans quelle mesure les réseaux de correspondance et d'influence ainsi que l'appartenance à certains cercles structurent-ils et favorisent-ils l'accès aux postes de direction?
 
 ## Aspects de l'information à collecter
