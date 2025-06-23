@@ -15,13 +15,19 @@ Ce projet vise à étudier l'évolution des doctrines et méthodes en entreprena
 * [Listes des CEOs](Liste_ceos.md)
 * [Catalogue des informations](Catalogue-des-informations.md)
 
-    
+### Import des données de Wikidata
+* [Données sur la population](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_population.sparqlbook)
+* [Nationalités](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_citizenships.sparqlbook)
+* [Occupations](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_organisations_additional_data.sparqlbook)
+* [Networks of organisations](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_relationships_to_organisations.sparqlbook)
+* [Donnees additionelles sur les organisations](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_organisations_additional_data.sparqlbook)
+ 
 
 ### Analyse des données de Wikidata (notebooks Python)
 * [Distribution des naissances dans le temps](https://com/Laillaa/French_CEOs/blob/main/github.notebooks_jupyter/wikidata_exploration/wdt_distribution_naissances_triplestore.ipynb)
 * [Nationalités](https://com/Laillaa/French_CEOs/blob/main/github.notebooks_jupyter/wikidata_exploration/wdt_bivariee_generations_continents_triplestore.ipynb)
 * [Occupations](https://com/Laillaa/French_CEOs/blob/main/github.notebooks_jupyter/wikidata_exploration/wdt_occupations_triplestore_exploration.ipynb)
-* [Occupations (vers la fin)](https://com/Laillaa/French_CEOs/blob/main/github.notebooks_jupyter/wikidata_exploration/wdt_bivariee_generations_continents_triplestore.ipynb)
+* [Occupations (vers la fin)](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_bivariee_generations_continents_triplestore.ipynb)
 * [Networks of organisations](https://github.com/Laillaa/French_CEOs/blob/main/notebooks_jupyter/wikidata_exploration/wdt_organisations_networks.ipynb)
  
 
