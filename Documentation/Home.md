@@ -17,10 +17,10 @@ Ce projet vise à étudier l'évolution des doctrines et méthodes en entreprena
 
 ### Import des données de Wikidata
 * [Données sur la population](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_population.sparqlbook)
-* [Nationalités](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_citizenships.sparqlbook)
-* [Occupations](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_organisations_additional_data.sparqlbook)
-* [Networks of organisations](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_relationships_to_organisations.sparqlbook)
-* [Donnees additionelles sur les organisations](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_organisations_additional_data.sparqlbook)
+* [Données sur les nationalités](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_citizenships.sparqlbook)
+* [Données sur les occupations](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_organisations_additional_data.sparqlbook)
+* [Données sur les networks of organisations](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_relationships_to_organisations.sparqlbook)
+* [Données additionelles sur les organisations](https://github.com/Laillaa/French_CEOs/blob/main/sparqlbooks/wdt_import_organisations_additional_data.sparqlbook)
  
 
 ### Analyse des données de Wikidata (notebooks Python)
